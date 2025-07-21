@@ -1,0 +1,968 @@
+<resources>
+    <string name="app_name">Lovorise</string>
+    <string name="add_your_best_photos">Add your best photos</string>
+    <string name="create_password">Create password</string>
+    <string name="password">Password</string>
+    <string name="choose_photo">Choose photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="save">Save</string>
+    <string name="use_email">Use email</string>
+    <string name="exit">Exit</string>
+    <string name="exit_signup_confirmation_message">Are you sure to exit? Your progress will be saved, and you can continue later.</string>
+    <string name="camera_permissions_required">Camera permissions required</string>
+    <string name="photo_permissions_required">Photo permissions required</string>
+    <string name="please_grant">Please grant</string>
+    <string name="saving">Saving</string>
+    <string name="your_password_must_have_at_least">Your password must have at least:</string>
+    <string name="six_characters_max_twenty">6 characters (max 20)</string>
+    <string name="one_letter_one_number">1 letter and 1 number</string>
+    <string name="one_special_character">1 special character (ex: # \$ % &amp; * @)</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+    <string name="delete_profile">Delete profile</string>
+    <string name="change_profile">Change profile</string>
+    <string name="upload_a_photo_or_video">Upload a photo or video</string>
+    <string name="take_a_photo">Take a photo</string>
+    <string name="reset">Reset</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="we_will_email_you_a_code_to_reset_your_password">We’ll email you a code to reset your password.</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="if_we_found_an_account_email_has_been_sent">If we found an account with %1$s, an email has been sent.</string>
+    <string name="please_check_your_email_in_a_moment">Please check your email in a moment</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="did_not_get_code">Didn't get a code?</string>
+    <string name="resend_code">Resend code</string>
+    <string name="rising_of_a_love_story">RISING OF A\nLOVE STORY</string>
+    <string name="send_code">Send Code</string>
+    <string name="verify">Verify</string>
+    <string name="terms">Terms</string>
+    <string name="continue_with_gmail">Continue with Gmail</string>
+    <string name="by_signing_up_you_agree_to_our">By signing up, you agree to our</string>
+    <string name="learn_how_we_use_your_data">Learn how we use your data in our</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="sign_in_to">Sign in to</string>
+    <string name="lovorise">Lovorise</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter_valid_email_or_password">Enter valid email address or password</string>
+    <string name="or">or</string>
+    <string name="you_are">You're</string>
+    <string name="you_entered">You entered</string>
+    <string name="confirm_your_age_is_correct">Confirm your age is correct.</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">Confirm</string>
+    <string name="leave">Leave</string>
+    <string name="skip">Skip</string>
+    <string name="get_verified">Get verified</string>
+    <string name="read_our">Read our</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="never_too_early_to_count_down">It’s never too early to count down</string>
+    <string name="choose_your_dob">Choose your date of birth.</string>
+    <string name="over_eighteen_only">Over 18s only</string>
+    <string name="over_eighteen_verify_with_id">Over 18? Verify your age with your ID</string>
+    <string name="eighteen_plus_info">Lovorise is for people aged 18 and over. We hope to see you when you reach that age!</string>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="show_more">Show more</string>
+    <string name="camera">camera</string>
+    <string name="to_change_email">To change email, please provide your account login password for verification</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="your_email_has_been_reset">Your email has been reset successfully</string>
+    <string name="stay_logged_in">Stay Logged In</string>
+    <string name="add_email">Add Email</string>
+    <string name="reset_email">Reset email</string>
+    <string name="photo">photo</string>
+    <string name="verification_code_invalid">Verification code is invalid</string>
+    <string name="cannot_access_this_email">Can’t access this email address?</string>
+    <string name="hold_drag_to_reorder">Hold &amp; drag to reorder.</string>
+    <string name="let_add_one_photo_to_start">Let’s add 1 photo to start</string>
+    <string name="permissions_in_your_settings">permissions in your settings.</string>
+    <string name="show_less">Show less</string>
+    <string name="provide_a_valid_email">Provide a valid email</string>
+    <string name="please_enter_a_valid_email">Please enter a valid email.</string>
+    <string name="receive_marketing_emails">If you do not want to receive marketing emails about our products and services, please tick this box.</string>
+    <string name="choose_your_interests">Choose your Interests</string>
+    <string name="get_better_recommendation_by_selecting_more_interests">Get better recommendation by selecting 5+ interests.</string>
+    <string name="search_interest">Search interest</string>
+    <string name="add_interests">Add Interests</string>
+    <string name="how_often_you_smoke">How often do you smoke?</string>
+    <string name="enter_code_sent_to_your_email">Please enter the code that was sent to your email %1$s</string>
+    <string name="no_result_for_interest">No results found. Try searching with different keywords or explore other interests.</string>
+    <string name="no_result_for_language">No results found. Try searching with different keywords or explore other languages.</string>
+    <string-array name="dating_preferences">
+        <item>Life partner</item>
+        <item>Long-term relationship</item>
+        <item>Casual meets</item>
+        <item>Marriage</item>
+        <item>New friends</item>
+        <item>Still figuring it out</item>
+    </string-array>
+    <string name="choose_option_that_feels_right">Choose 1 or 2 option that feel right for you.</string>
+    <string name="dating_preference">Looking for</string>
+    <string name="what_do_you_want_from_your_meet">What do you want from your meet?</string>
+    <string name="aware_gender_update">I am aware that my gender can only be changed once. After that, I'll need to authenticate ID to modify my gender.</string>
+    <string name="how_often_do_you_drink">How often do you drink?</string>
+    <string name="what_is_you_education_level">What is your Education Level?</string>
+    <string name="what_you_want_in_family_planning">What you want in family planning?</string>
+    <string name="enter_six_digit_code">Enter 6-digit code</string>
+    <string name="about_your_gender">About your gender</string>
+    <string name="tell_something_missing">Tell us if we’re missing something.</string>
+    <string name="describe_here">Describe here ...</string>
+    <string name="gender">Gender</string>
+    <string name="write_something_fun">Write something fun...</string>
+    <string name="enable_location">Enable location</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="what_is_your_religion">What is your religion?</string>
+    <string name="let_us_know_your_location">Let us know your location</string>
+    <string name="set_your_location_to_see_who_is_nearby">Set your location to see who is nearby or beyond.You will be unable to match with anyone else.</string>
+    <string name="i_agree">I agree</string>
+    <string name="who_would_you_like_to_meet">Who would you like to meet?</string>
+    <string name="how_tall_are_you">How tall are you?</string>
+    <string name="you_will_only_be_shown_to_people_looking_to_date_your_gender">You’ll only be shown to people looking to date your gender.</string>
+    <string name="what_languages_do_you_know">What languages do you know?</string>
+    <string name="select_up_to_five">Select up to 5.</string>
+    <string name="search_languages">Search languages</string>
+    <string name="name">Name</string>
+    <string name="prompt">Prompt</string>
+    <string name="continue_editing">Continue editing</string>
+    <string name="discard_post">Discard post</string>
+    <string name="your_reel_is_not_saved">Your reel is not saved</string>
+    <string name="please_select_three_interest_to_save">Please select minimum 3 interest to save</string>
+    <string name="enter_real_name">Enter the name you use in real life.</string>
+    <string name="guidelines">guidelines</string>
+    <string name="create">Create</string>
+    <string name="answer_prompt">Answer Prompt</string>
+    <string name="select_a_prompt">Select a prompt</string>
+    <string name="building_safe_dating_community">Building a Safe\nDating Community</string>
+    <string-array name="text_prompts">
+        <item>The most spontaneous thing I've done is:</item>
+        <item>My ultimate comfort food is:</item>
+        <item>The best advice I've ever received is:</item>
+        <item>My guilty pleasure TV show is:</item>
+        <item>A dream destination I've yet to visit is:</item>
+        <item>The book that changed my life is:</item>
+        <item>My favorite way to spend a weekend is:</item>
+        <item>The most unusual hobby I have is:</item>
+        <item>My spirit animal is:</item>
+        <item>The best concert I've ever attended was:</item>
+        <item>I could talk for hours about:</item>
+        <item>My ideal Saturday night looks like:</item>
+        <item>The superpower I'd love to have is:</item>
+        <item>If I could live in any era, it would be:</item>
+        <item>My biggest pet peeve is:</item>
+    </string-array>
+    <string-array name="voice_prompts">
+        <item>My go-to karaoke song is...</item>
+        <item>If I could time travel, I’d go to...</item>
+        <item>A fun fact about me that most people don’t know...</item>
+        <item>The best advice I’ve ever received...</item>
+        <item>The movie that best describes my life is...</item>
+        <item>My hidden talent is...</item>
+        <item>The first thing people notice about me is...</item>
+        <item>The last book I couldn’t put down was...</item>
+        <item>I’ll never get tired of...</item>
+    </string-array>
+    <string-array name="video_prompts">
+        <item>A day in my life looks like...</item>
+        <item>My perfect weekend would be...</item>
+        <item>Let me show you something special to me...</item>
+        <item>A skill I’m proud of...</item>
+        <item>The last time I laughed really hard was...</item>
+        <item>Let’s talk about my favorite hobby...</item>
+        <item>The most adventurous thing I’ve done is...</item>
+        <item>What I’m looking for in a partner...</item>
+        <item>If I could have dinner with anyone, it would be...</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Man</item>
+        <item>Woman</item>
+        <item>Non-binary</item>
+    </string-array>
+    <string-array name="prompt_tabs">
+        <item>Text</item>
+        <item>Voice</item>
+        <item>Video</item>
+    </string-array>
+    <string name="welcome_message">Welcome! We're excited to be a part of our community.\n\nHere on Lovorise, we value kindness and respect towards everyone, regardless of their background, beliefs or identity.\n\nTo keep Lovorise a safe and inclusive place, please follow our</string>
+    <string name="help_message">\nOur team is here to help whenever you need.\n\nWith love, The Lovorise team.</string>
+    <string-array name="more_gender_options">
+        <item>Bigender</item>
+        <item>Non-binary man</item>
+        <item>Non-binary woman</item>
+        <item>Polygender</item>
+        <item>Transgender</item>
+        <item>Trans man</item>
+        <item>Trans woman</item>
+    </string-array>
+    <string name="add_more_about_your_gender">Add more about your gender</string>
+    <string name="pick_gender_that_describe_you">Pick the gender that best describe you.</string>
+    <string name="save_and_close">Save and close</string>
+    <string-array name="drink_preferences">
+        <item>Not for me</item>
+        <item>Sober curious</item>
+        <item>Socially</item>
+        <item>On special occasion</item>
+        <item>Newly teetotal</item>
+    </string-array>
+    <string-array name="education_levels">
+        <item>Bachelor degree</item>
+        <item>At Uni</item>
+        <item>College</item>
+        <item>PhD</item>
+        <item>On a graduate program</item>
+        <item>Master degree</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="children_preferences">
+        <item>Want children</item>
+        <item>Don’t want children</item>
+        <item>Open to children</item>
+        <item>Have children</item>
+        <item>Not sure yet</item>
+        <item>Prefer not to say</item>
+    </string-array>
+    <string-array name="who_would_you_like_to_meet_options">
+        <item>All</item>
+        <item>Men</item>
+        <item>Women</item>
+        <item>Non-binary</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Punjabi</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Hindi</item>
+        <item>German</item>
+        <item>Chinese</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Italian</item>
+        <item>Arabic</item>
+        <item>Bengali</item>
+        <item>Turkish</item>
+        <item>Vietnamese</item>
+        <item>Persian</item>
+        <item>Swahili</item>
+        <item>Thai</item>
+        <item>Dutch</item>
+        <item>Greek</item>
+        <item>Malay</item>
+        <item>Hebrew</item>
+        <item>Polish</item>
+        <item>Ukrainian</item>
+        <item>Tamil</item>
+        <item>Urdu</item>
+        <item>Filipino</item>
+        <item>Indonesian</item>
+        <item>Romanian</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="religions">
+        <item>Muslim</item>
+        <item>Hindu</item>
+        <item>Christian</item>
+        <item>Sikh</item>
+        <item>Buddhist</item>
+        <item>Spiritual</item>
+        <item>Atheist</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="smoking_preferences">
+        <item>Non-smoker</item>
+        <item>Smoker</item>
+        <item>Social smoker</item>
+        <item>New smoker</item>
+    </string-array>
+    <string-array name="tab_options">
+        <item>New</item>
+        <item>All</item>
+    </string-array>
+    <string name="unmatch">Unmatch</string>
+    <string name="block">Block</string>
+    <string name="report">Report</string>
+    <string name="delete_conversation">Delete Conversation</string>
+    <string name="get_swiping">Get swiping</string>
+    <string name="no_conversations_text">When you match with other people they’ll appear here. Where you can send them a message.</string>
+    <string name="likes">Likes</string>
+    <string name="matches">Matches</string>
+    <string name="see_all">See all</string>
+    <string name="reply">Reply</string>
+    <string name="your_password_has_been_reset">Your password has been reset successfully</string>
+    <string name="change_password">Change Password</string>
+    <string name="reset_password">Reset password</string>
+    <string name="current_password">Current Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="do_you_want_to_unblock">Do you want to unblock</string>
+    <string name="people_you_have_blocked">People you've blocked will appear here.</string>
+    <string name="blocked_people">Blocked People</string>
+    <string name="message">Message</string>
+    <string name="messages">Messages</string>
+    <string name="search">Search</string>
+    <string name="ringing">Ringing</string>
+    <string name="return_to_the_call">Return to the call...</string>
+    <string name="you_matched_with">You matched with</string>
+    <string name="sure_want_to_delete_messages">Are you sure you want to delete these messages?</string>
+    <string name="sure_want_to_unblock">Are you sure you want to unblock</string>
+    <string name="sure_want_to_block">Are you sure you want to block</string>
+    <string name="unblock_this_user">Unblock this user</string>
+    <string name="sure_want_to_unmatch">Are you sure you want to unmatch from</string>
+    <string name="delete">Delete</string>
+    <string name="unblock">Unblock</string>
+    <string name="new">New</string>
+    <string name="all">All</string>
+    <string name="liked_you">Liked you</string>
+    <string name="see_who_liked_you">See who liked you</string>
+    <string name="your_interests">Your Interests</string>
+    <string name="when_you_like_someone_you_find_here">When you like someone, you’ll find them right here</string>
+    <string name="see_your_matches">See your matches</string>
+    <string name="coins">Coins</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="bonus">Bonus</string>
+    <string name="backtrack">Backtrack</string>
+    <string name="backtrack_to_last_swipe">Backtrack to last swipe</string>
+    <string name="use_coins">Use Coins</string>
+    <string name="ok">OK</string>
+    <string name="onboarding">Onboarding</string>
+    <string name="invited">Invited</string>
+    <string name="copied_link_to_clipboard">Copied to clipboard!</string>
+    <string name="copy_link">Copy link</string>
+    <string name="share_link">Share link</string>
+    <string name="share_invite_link">Share invite link</string>
+    <string name="accepted_invitations">Accepted invitations</string>
+    <string name="your_friend">Your friend</string>
+    <string name="invite_and_get_rewards">Invite friends &amp; get rewards!</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="daily_login_rewards">Daily login rewards</string>
+    <string name="coin_balance">Coin Balance</string>
+    <string name="buy_coins">Buy Coins</string>
+    <string name="continue_txt">Continue</string>
+    <string name="submit">Submit</string>
+    <string name="interests">Interests</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="terminate_session">Terminate session</string>
+    <string name="status">Status</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="subscription">Subscription</string>
+    <string name="enjoy_ultimate_perks">Enjoy ultimate perks and unmatched visibility to stand out.</string>
+    <string name="unlock_essential_features">Unlock essential features for an enhanced dating experience.</string>
+    <string name="lovorise_premium">Lovorise Premium</string>
+    <string name="your_lovorise_premium_weekly">Your Lovorise Premium Weekly</string>
+    <string name="your_lovorise_premium_monthly">Your Lovorise Premium Monthly</string>
+    <string name="cancel_subscription_message">Are you sure you want to cancel your Premium subscription?\nIf you cancel, you will not be charged on your renewal date. You will still have access to Premium features until %1$s.</string>
+    <string name="get_coins">Get Coins</string>
+    <string name="next_renewal_date">Next renewal date</string>
+    <string name="pay_plan">Pay plan</string>
+    <string name="cancel_subscription">Cancel Subscription</string>
+    <string name="subscription_terms">Subscription Terms</string>
+    <string name="super_spotlights">Super spotlights</string>
+    <string name="spotlights">Spotlights</string>
+    <string name="spotlight">Spotlight</string>
+    <string name="hours">hours</string>
+    <string name="aware_age_update">I am aware that my age can only be changed once. After that, I'll need to authenticate ID to modify my age.</string>
+    <string name="aware_name_update">I am aware that my name can only be changed once. After that, I'll need to authenticate ID to modify my name. </string>
+    <string name="age">Age</string>
+    <string name="month">month</string>
+    <string name="apply">Apply</string>
+    <string name="reel_posted_successfully">Reel posted successfully</string>
+    <string name="active_until">Active until</string>
+    <string name="see_less_features">See less features</string>
+    <string name="see_more_features">See more features</string>
+    <string name="get_one_month_for">Get 1 month for</string>
+    <string name="revisit_give_another_chance">Revisit profiles and give them another chance</string>
+    <string name="connect_with_people_from_other_cities_countries">Connect with people from other cities and countries</string>
+    <string name="browse_profiles_invisibly">Browse profiles invisibly, keeping your activity private</string>
+    <string name="use_enhanced_filters_to_find">Use enhanced filters to find exactly who you're looking for</string>
+    <string name="see_who_is_checking_out_you">See who’s checking out your profile</string>
+    <string name="see_who_has_already_liked_you">See who has already liked you</string>
+    <string name="make_voice_calls_to_your_matches">Make voice calls to your matches anytime</string>
+    <string name="swipe_many_profile_you_want">Swipe as many profiles as you want</string>
+    <string name="boost_visibility_for">Boost visibility for</string>
+    <string name="and_pay_once_for_one_week">and pay once for 1 week, does not auto-renew.</string>
+    <string name="and_auto_renew_unless_google_play">and the auto-renew unless cancel via Google Play settings.</string>
+    <string name="and_auto_renew_unless_app_store_settings">and the auto-renew until you cancel via App Store settings.</string>
+    <string name="by_continuing_to_lovorise_premium">By continuing to Lovorise Premium you agree to the Lovorise</string>
+    <string name="how_did_you_hear_about_us">How did you hear about us?</string>
+    <string name="welcome_to_lovorise_hearts_shop">Welcome to the Lovorise Hearts Shop</string>
+    <string name="try_power_ups_using_coins">Try power-ups feature using coins</string>
+    <string name="by_tapping_ok_you_agree_to_the">By tapping "OK" you agree to the</string>
+    <string name="my_bio">My Bio</string>
+    <string name="i_m_looking_for">I’m looking for:</string>
+    <string name="visible">Visible</string>
+    <string name="bio">Bio</string>
+    <string name="add_bio">Add Bio</string>
+    <string name="hidden">Hidden</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="description">Description</string>
+    <string name="write_something">Write something...</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="add_job_title">Add Job Title</string>
+    <string name="always_visible_on_profile">Always visible on profile</string>
+    <string name="visible_on_profile">Visible on profile</string>
+    <string name="complete_your_profile">Complete your profile</string>
+    <string name="add_company_name">Add Company/Institute name</string>
+    <string name="what_is_your_profession">What is your profession?</string>
+    <string name="do_you_have_any_pets">Do you have any pets?</string>
+    <string name="height">Height</string>
+    <string name="education_level">Education Level</string>
+    <string name="your_profession">Your Profession</string>
+    <string name="show_me">Show me</string>
+    <string name="age_range">Age Range</string>
+    <string name="location">Location</string>
+    <string name="pets">Pets</string>
+    <string name="religion">Religion</string>
+    <string name="family_plans">Family Plans</string>
+    <string name="drinking">Drinking</string>
+    <string name="smoking">Smoking</string>
+    <string name="basics">Basics</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string name="profile_visitors">Profile Visitors</string>
+    <string name="languages">Languages</string>
+    <string name="plans">Plans</string>
+    <string name="share">Share</string>
+    <string name="link_copied">Link copied</string>
+    <string name="rate">Rate</string>
+    <string name="reel_uploaded_successfully">Reel uploaded successfully!</string>
+    <string name="uploading">Uploading</string>
+    <string name="record_or_upload">Record or upload a 15s video to\nshare with other people</string>
+    <string name="no_result_found_for_name">No results found. Try searching with different names.</string>
+    <string name="inform">Inform</string>
+    <string name="interested">Interested?</string>
+    <string name="done">Done</string>
+    <string name="do_you_want_to_block">Do you want to block</string>
+    <string name="add_photos">Add Photos</string>
+    <string name="more_photos_in_your_profile_to_unlock">more photos in your profile to unlock all photos</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="reels">Reels</string>
+    <string name="logout">Logout</string>
+    <string name="this_email_will_be_used_for_login">This email will be used for login and password recovery</string>
+    <string name="enter_new_email">Enter new email</string>
+    <string name="sort_by">Sort By</string>
+    <string name="do_you_want_to_logout_now">Do you want to logout now?</string>
+    <string name="permanently_deleted_from_lovorise">permanently deleted from Lovorise.</string>
+    <string name="your_account">Your account</string>
+    <string name="turn_on">Turn on</string>
+    <string name="this_will_allow_you_to_take_photos_videos">This will allow you to take photos and record videos. You can change this permission at any time in your device's settings.</string>
+    <string name="to_take_photos_and_videos_we_need">To take photos and videos, we need access to your device’s camera</string>
+    <string name="swipe_up_for_more">Swipe up for more!</string>
+    <string name="add_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="for_you">For you</string>
+    <string name="my_reels">My Reels</string>
+    <string name="my_favourites">My Favourites</string>
+    <string name="add_a_caption">Add a caption...</string>
+    <string name="let_us_know">Let us know</string>
+    <string name="rate_app">Rate App</string>
+    <string name="my_hearts">My Hearts</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="manage">Manage</string>
+    <string name="weekly">Week</string>
+    <string name="week">Week</string>
+    <string name="monthly">Monthly</string>
+    <string name="month_cap">Month</string>
+    <string name="upgrade_plan">Upgrade plan</string>
+    <string name="change_plan">Change plan</string>
+    <string name="view_plan">View plan</string>
+    <string name="next_payment">Next payment on %1$s.</string>
+    <string name="subscribed_to_premium_weekly_message">You have subscribed to Lovorise Premium Week, try out your new benefits!</string>
+    <string name="subscribed_to_premium_monthly_message">You have subscribed to Lovorise Premium Monthly, try out your new benefits!</string>
+    <string name="get_from">Get from £2.99</string>
+    <string name= "get_one_month_premium">Get 1 month for £ 5.99</string>
+    <string name= "get_one_week_premium">Get 1 week for £ 2.99</string>
+    <string name="monthly_member_plan_message">You're a member of a Lovorise Premium Monthly plan. Your next billing date is on %1$s, with a total amount due of %2$s.</string>
+    <string name="weekly_member_plan_message">You're a member of a Lovorise Premium Week plan.</string>
+    <string name="lovorise_hearts">Lovorise Hearts</string>
+    <string name="get_hearts">Get Hearts</string>
+    <string name="unlock_all_features_message">Unlock all of our features to be in complete control of your experience</string>
+    <string name="share_reels">Share Reels</string>
+    <string name="share_reel">Share Reel</string>
+    <string name="create_reels">Create Reels</string>
+    <string name="create_reel">Create Reel</string>
+    <string name="add_profession">Add profession</string>
+    <string name="distance_preference">Distance Preference</string>
+    <string name="see_who_visited_your_profile">See who visited your profile</string>
+    <string name="unlimited">Unlimited</string>
+    <string name="invite">Invite</string>
+    <string name="claim">Claim</string>
+    <string name="hide_this_one">Hide this one</string>
+    <string name="write_a_bio">Write a bio</string>
+    <string name="profile">Profile</string>
+    <string name="verify_photos">Verify Photos</string>
+    <string name="upload_photos">Upload Photos</string>
+    <string name="do_you_enjoy_using_lovorise">Do you enjoy using Lovorise?</string>
+    <string name="upload">Upload</string>
+    <string name="we_appreciate_your_feedback">We appreciate your feedback and are committed to making continues improvements</string>
+    <string name="add">Add</string>
+    <string name="we_would_love_to_hear_about_your_experience">We'd love to hear about your experience with our app. Please take a moment to share your thoughts with us.</string>
+    <string name="post">Post</string>
+    <string name="thanks_for_your_feedback">Thanks for your feedback</string>
+    <string name="send_your_feedback">Send your feedback</string>
+    <string name="describe_here_your_personal_experience">Describe here your personal experience and opinion about us...</string>
+    <string name="write_a_comment_optional">Write a comment (optional)</string>
+    <string name="rate_your_experience">Rate your Experience</string>
+    <string name="active">Active</string>
+    <string name="we_will_show_fewer_reels_like_this">We’ll show fewer reels like this</string>
+    <string name="visitors">Visitors</string>
+    <string name="great">Great</string>
+    <string name="nice">Nice</string>
+    <string name="satisfied">Satisfied</string>
+    <string name="bad">Bad</string>
+    <string name="original_audio">Original Audio</string>
+    <string name="average_txt">Average</string>
+    <string name="undo">Undo</string>
+    <string name="away">away</string>
+    <string name="new_here">New here</string>
+    <string name="discovery">Discovery</string>
+    <string name="preferences">Preferences</string>
+    <string name="manage_account">Manage Account</string>
+    <string name="change_email">Change Email</string>
+    <string name="i_do_not_want_to_see_reels_from">I don't want to see reels from this account</string>
+    <string name="this_reel_make_me_uncomfortable">This reel makes me uncomfortable</string>
+    <string name="report_reel">Report Reel</string>
+    <string name="please_select_reasons_for_reporting_this_reel">Please select the reasons for reporting this reel</string>
+    <string name="not_interested">Not Interested</string>
+    <string name="swipe_profile_left_message">Swiping a profile to left means that you aren’t interested.</string>
+    <string name="swipe_profile_right_message">Swiping a profile to right means that you want to connect!</string>
+    <string-array name="report_reels_reasons">
+        <item>It's spam</item>
+        <item>Nudity or sexual activity</item>
+        <item>Hate speech or symbols</item>
+        <item>False information</item>
+        <item>Scam or fraud</item>
+        <item>Violence or dangerous organisations</item>
+        <item>Bullying or harassment</item>
+        <item>Suicide or self-injury</item>
+        <item>Sale of illegal or regulated goods</item>
+        <item>Intellectual property violation</item>
+    </string-array>
+    <string-array name="delete_account_reasons">
+        <item>I've met someone</item>
+        <item>I need a break from Lovorise</item>
+        <item>Safety or privacy concerns</item>
+        <item>I have multiple accounts</item>
+    </string-array>
+    <string-array name="post_account_deletion_messages">
+        <item>You will no longer have access to log in or use any Lovorise services with that account</item>
+        <item>You will lose access to all your matches</item>
+        <item>Information that isn't stored in your account, such as direct messages, will not be visible to others</item>
+        <item>You won't have the option to claim a refund for any items you've bought or received</item>
+    </string-array>
+    <string name="why_are_you_leaving_lovorise">Why are you leaving Lovorise?</string>
+    <string name="we_are_sorry_see_you_go">We're sorry to see you go! We'd love to know why you want to delete your account, so we can improve the app and support our community.</string>
+    <string name="other_reason">Other reason</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="pause_my_account">Pause my account</string>
+    <string name="pause_my_account_caps">Pause My Account</string>
+    <string-array name="support_categories">
+        <item>App error</item>
+        <item>Operations &amp; Payment</item>
+        <item>Suggestion for improvement</item>
+    </string-array>
+    <string name="resume_my_account_caps">Resume My Account</string>
+    <string name="pause_account_msg">If you want to keep your account but prevent others from seeing it, then can pause your account. You can turn this off in the settings.</string>
+    <string name="resume_account_msg">Resume your account to meet new people. People who you have already liked may still  see your profile &amp; match with you.</string>
+    <string name="delete_my_account">Delete my account</string>
+    <string name="resume_my_account">Resume my account</string>
+    <string name="do_you_want_to_continue">Do you want to continue?</string>
+    <string name="if_you_delete">If you delete your account:</string>
+    <string name="delete_this_account">Delete this account?</string>
+    <string name="your_account_and_data_will_be_deleted">Your account and data will be deleted permanently.</string>
+    <string name="tell_us_why_are_you_leaving">Tell us why you are leaving?</string>
+    <string name="help_and_support">Help &amp; Support</string>
+    <string name="how_can_we_help_you">How can we help you?</string>
+    <string name="a_guide_to_lovorise">A guide to Lovorise</string>
+    <string name="troubleshooting">Troubleshooting</string>
+    <string name="support">Support</string>
+    <string name="current_location">Current Location</string>
+    <string name="days">days</string>
+    <string name="between">Between</string>
+    <string name="show_verified_profile_only">Show verified profile only</string>
+    <string name="select_religion">Select religion</string>
+    <string name="select_family_plan">Select family plan</string>
+    <string name="select_edu_level">Select education level</string>
+    <string name="choose_languages">Choose languages</string>
+    <string name="add_this_filter">Add this filter</string>
+    <string name="advanced">Advanced</string>
+    <string name="basic">Basic</string>
+    <string name="verification">Verification</string>
+    <string name="report_has_been_sent">Report has been sent.</string>
+    <string name="still_figuring">Still figuring it out</string>
+    <string name="new_friends">New friends</string>
+    <string name="casual_relationship">Casual meets</string>
+    <string name="long_term_relationship">Long-term relationship</string>
+    <string name="life_partner">Life partner</string>
+    <string name="account">Account</string>
+    <string name="about_us">About us</string>
+    <string name="community_guidelines">Community Guidelines</string>
+    <string name="privacy_and_community">Privacy &amp; Community</string>
+    <string name="contact_us">Contact us</string>
+    <string name="contact_for_inquiries">Contact for inquires</string>
+    <string name="appearance">Appearance</string>
+    <string name="system_default">System Default</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+<!--    <string name="resume_your_account_to_meet_new_people">Resume your account to meet new people. People who you have already liked may still  see your profile &amp; match with you.</string>-->
+    <string name="your_personalized_feed_on_way">Your personalized feed is on the way!</string>
+    <string name="create_reel_message">Check back soon for exciting reels tailored just for you!</string>
+    <string name="you_are_in_spotlight_message">For the next 1 hour, your profile will be shown to more people in your area! Start swiping to maximize your matches.</string>
+    <string name="you_are_in_super_spotlight_message">For the next 24 hour, your profile will be shown to more people in your area! Start swiping to maximize your matches.</string>
+    <string name="you_are_in_spotlight">You’re in the Spotlight</string>
+    <string name="you_are_in_super_spotlight">You’re in the Super Spotlight</string>
+    <string name="you_have_not_created_any_reels_yet">You haven't created any reels yet!</string>
+    <string name="no_favorites_yet">No favorites yet!</string>
+    <string name="explore">Explore</string>
+    <string name="hearts">Hearts</string>
+    <string name="buy_hearts">Buy Hearts</string>
+    <string name="your_block_list_empty">Your blocked list is empty</string>
+    <string name="block_user_message"> If someone’s behavior isn’t right, you can block them to maintain a safe and comfortable experience.</string>
+    <string name="start_sharing_your_moment_creating_first_reel">Start sharing your moments by creating your first reel.</string>
+    <string name="discover_amazing_reels_and_favorite">Discover amazing reels and add them to your favorites by tapping the save icon.</string>
+
+    <string name="read_receipts">Read Receipts</string>
+    <string name="send_read_receipts">Send read receipts</string>
+    <string name="turning_off_will_prevent_any_matches_from_activating">Turning this off will prevent any matches from activating Read Receipts in your conversation</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification">Notification</string>
+    <string name="push_notifications">Push notifications</string>
+    <string name="discover">Discover</string>
+    <string name="please_select_reasons_behind_report">Please select reasons behind report</string>
+    <string-array name="report_profile_reasons">
+        <item>I’m not interested in this person</item>
+        <item>Profile is fake</item>
+        <item>Inappropriate content</item>
+        <item>False information</item>
+        <item>Scam or fraud</item>
+        <item>Someone in danger</item>
+        <item>Bullying or harassment</item>
+        <item>Undergrad or minor</item>
+        <item>Sale of illegal or regulated goods</item>
+        <item>Intellectual property violation</item>
+    </string-array>
+    <string name="team_lovorise">Team Lovorise</string>
+    <string name="anonymous_mode">Anonymous Mode</string>
+    <string name="when_turned_off_your_profile_will_be_hidden">When turned off, your profile will be hidden from the card stack. You will be discoverable only by people you like</string>
+    <string name="control_your_profile">Control your profile</string>
+    <string name="hide_my_age">Hide my age</string>
+    <string name="online_status">Online status</string>
+    <string name="hide_location">Hide Location</string>
+    <string name="you_will_be_discoverable">You will be discoverable according to your actions</string>
+    <string name="you_can_change_your_location">You can change your location to see Lovorise members in other cities</string>
+    <string name="change_your_location_to_explore_lovorise_member_in_different_cities">Change your location to explore Lovorise members in different cities.</string>
+    <string name="profile_verification">Profile Verification</string>
+    <string name="blocked_users">Blocked users</string>
+    <string name="privacy_and_security">Privacy &amp; Security</string>
+    <string name="show_distance_in">Show distances in</string>
+    <string name="we_will_show_you_who_match_your_vibe">We’ll show you people who match your vibe, but you’ll still able to match with people outside of your selections.</string>
+    <string name="add_languages">Add languages</string>
+    <string name="language">Language</string>
+    <string name="travel">Travel</string>
+    <string name="using_default_language_message">Using the system default will automatically adjust Lovorise’s language to match your device’s system settings.</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="start_exploring">Start exploring</string>
+    <string name="round_trip_message">Your round trip destination is set to %1$s, which will be activated from %2$s to %3$s!</string>
+    <string name="select_depature_date">Select depature date</string>
+    <string name="select_return_date">Select return date</string>
+    <string name="your_travel_ticket_destination_set_to">Your Travel Ticket destination set to</string>
+    <string name="for_the_next">for the next</string>
+    <string name="please_check_your_mail_in_moment">Please check your email in a moment</string>
+    <string name="use_travel_ticket_to_change">Use travel ticket to change your destination for how long you want</string>
+    <string name="travel_ticket">Travel Ticket</string>
+    <string name="search_and_set_travel">Search and set your travel ticket destination to any city you want</string>
+    <string name="no_result_for_travel">No results found. Try searching with different keywords.</string>
+    <string name="i_am_travelling_to">I’m travelling to</string>
+    <string name="select_destination">Select Destination</string>
+    <string name="thanks_for_letting_us_know">Thanks for letting us know</string>
+    <string name="upload_ss_optional">Upload screenshot(Optional)</string>
+    <string name="screenshots_with_size_less_than">Screenshots with the size of each one under 5 MB</string>
+    <string name="enter_problem_description">Enter problem description...</string>
+    <string name="problem_description">Problem description</string>
+    <string name="need_support">Need Support?</string>
+    <string name="edit_privacy_settings">Edit privacy settings</string>
+    <string name="security_and_privacy">Security &amp; Privacy</string>
+    <string name="choose_who_can_view_your_reel">Choose who can view your Reel</string>
+    <string name="everyone">Everyone</string>
+    <string name="your_liked_people_on_lovorise">Your liked people on Lovorise</string>
+    <string name="who_i_liked">Who I liked </string>
+    <string name="your_matches_on_lovorise">Your Matches on Lovorise</string>
+    <string name="everyone_on_lovorise">Everyone on Lovorise</string>
+    <string name="are_you_sure_you_want_to_delete_this_reel">Are you sure you want to delete this reel?</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="my_reel">My Reel</string>
+    <string-array name="subscriptions_feature_titles">
+        <item>Unlimited Swipes</item>
+        <item>Control your privacy</item>
+        <item>See Who Liked You</item>
+        <item>Who's Viewed Your Profiles</item>
+        <item>Advanced Filters</item>
+        <item>Travel Ticket</item>
+        <item>Anonymous Mode</item>
+        <item>Unlimited Backtrack</item>
+        <item>Ads-free experience</item>
+    </string-array>
+
+    <string-array name="subscriptions_feature_descriptions">
+        <item>Swipe as much as you want to explore endless matches.</item>
+        <item>Gain more control over how others interact with your content.</item>
+        <item>Instantly view profiles of those who liked you.</item>
+        <item>Find out who’s interested in you by checking profile views.</item>
+        <item>Narrow your search with personalized filters.</item>
+        <item>Change your location to connect with people worldwide.</item>
+        <item>Check out profiles without them knowing you visited.</item>
+        <item>Accidentally swiped left? Backtrack as much as you need.</item>
+        <item>Enjoy an uninterrupted dating journey without any ads in your way.</item>
+    </string-array>
+
+    <string name="you_are_officially_anonymous">You are officially Anonymous</string>
+    <string name="you_are_no_longer_anonymous">You are no longer Anonymous</string>
+    <string name="got_it">Got it</string>
+    <string name="views">Views</string>
+    <string name="no_view_yet">No views yet!</string>
+    <string name="once_your_reel_gains_attention">Once your reel gains attention, you'll see the number of viewers here.</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="anonymous_mode_message">Stay hidden while you explore. See without being seen until you're ready to make a move</string>
+    <string name="no_longer_anonymous_mode_message">Continue enjoying Anonymous Mode and more features to enhance your dating experience.</string>
+
+    <string name="to_delete_account_please_provide_your_account_login_password">To delete account, please provide your account login password for verification</string>
+    <string name="added_password">Added password</string>
+    <string name="set_txt">Set</string>
+    <string name="add_password_to_your_account">Add password to your account</string>
+    <string name="set_password">Set Password</string>
+    <string name="change_my_filters">Change my filters</string>
+    <string name="you_are_currently_offline">You are currently offline.</string>
+    <string name="your_internet_connection_was_restored">Your internet connection was restored.</string>
+    <string name="create_your_own_reel">Create Your Own Reel</string>
+    <string name="check_out_profiles_without_them_knowing">Check out profiles without them knowing you visited.</string>
+    <string name="you_are_now_visible">You’re now visible!</string>
+    <string name="continue_enjoying_anonymous_mode_and_more_features">Continue enjoying Anonymous Mode and more features to enhance your dating experience. </string>
+    <string name="anonymous_mode_off_update_anytime">Anonymous mode is off. Update your settings anytime to manage your visibility.</string>
+    <string name="unlock_more_reels">Unlock More Reels</string>
+    <string name="expand_your_experience_by_changing_filter_or_check_later">Expand your experience by changing your filters or check later.</string>
+    <string name="you_have_watched_all_the_reels">You’ve watched all the reels!</string>
+    <string name="your_password_has_been_set">Your password has been set successfully.</string>
+    <string name="location_permission_required">Location Permission Required</string>
+    <string name="lovorise_needs_access_to_your_location">Lovorise needs access to your location to provide the best possible matches.</string>
+    <string name="you_have_swiped_everyone_nearby">You’ve swiped everyone!</string>
+    <string name="change_filter_or_check_later">Change your filters to discover new people or check later.</string>
+
+    <string name="enable_all_notifications">Enable all notifications</string>
+    <string name="new_activity">New Activity</string>
+    <string name="secret_crush">Secret Crush</string>
+    <string name="other">Other</string>
+    <string name="try_now">Try now</string>
+    <string name="keep_exploring">Keep Exploring</string>
+    <string name="verified">Verified</string>
+    <string name="add_recovery_email">Add Recovery Email</string>
+    <string name="your_recovery_email_ensures_you_never_loose_access">Your recovery email ensures you never loose access to your account. We'll use this email to help you reset your password or verify your account if required.</string>
+    <string name="secure_your_account">Secure Your Account</string>
+    <string name="offer_and_promotions">Offer &amp; promotions</string>
+    <string name="choose_profile">Choose profile</string>
+    <string name="identity_verification">Identity Verification</string>
+    <string name="take_photo_of_id">Take a photo of ID card</string>
+    <string-array name="identity_verification_requirements">
+        <item>Government issued</item>
+        <item>Original full sized, unedited documents </item>
+        <item>Readable, well lit, coloured images</item>
+        <item>Place documents against a single coloured background</item>
+        <item>No black and white images</item>
+        <item>No edited or expired documents</item>
+    </string-array>
+    <string-array name="id_verification_types">
+        <item>Government-issued ID Card</item>
+        <item>Driving license</item>
+        <item>Passport</item>
+    </string-array>
+    <string name="front_of_document">Front of document</string>
+    <string name="verification_successful">Verification Successful</string>
+    <string name="verification_success_message">Congratulations! Your verification has been successfully completed. Your profile is now verified, and a blue checkmark has been added to your account.</string>
+    <string name="back_of_document">Back of document</string>
+    <string name="country_of_issued">Country of Issued</string>
+    <string name="choose_how_your_want_to_verify">Choose how you want to verify your age</string>
+    <string name="only_mentioned_docs_accepted">Only the documents mentioned below will be accepted, and all other documents will be rejected.</string>
+    <string name="by_continuing_you_agree_to_our">By continuing, you agree to our</string>
+    <string name="scan_document">Scan document</string>
+    <string name="take_my_photo">Take my video selfie</string>
+    <string name="to_verify_successfully">To verify successfully:</string>
+    <string-array name="photo_verification_requirements">
+        <item>Write clearly on a paper:\nYour full name, date of birth, location, and today’s date.</item>
+        <item>Hold the paper visibly in your hand.</item>
+        <item>Record a short video selfie (your face and the paper must be clearly visible).</item>
+        <item>Make sure the information matches your ID document and profiles on the app.</item>
+    </string-array>
+    <string name="we_wont_use_this_photo_it_is_just_to_verify">We won’t use this video on your profile. It’s just to verify your identity.</string>
+    <string name="copy_this_pose_and_take_photo">Copy this pose and take a photo</string>
+    <string name="for_more_info_how_we_use_data">For more info how we use, retain and protect your personal data, please read our </string>
+    <string name="your_photo_does_not_match">Your photo doesn’t match</string>
+    <string name="does_this_photo_match">Does this photo match?</string>
+    <string name="retake">Retake</string>
+    <string name="verification_under_review">Verification under review</string>
+    <string name="we_are_currently_reviewing_your_profile">We are currently reviewing your profile and will get back to you shortly</string>
+    <string name="not_right_now">Not right now</string>
+    <string name="photos_plus_id">Photos + ID</string>
+    <string name="warning">Warning!</string>
+    <string name="our_team_is_here_to_help_when_need">Our team is here to help whenever you need.</string>
+    <string name="keep_conversation_meaningful_and_constructive">Keep conversations meaningful and constructive. Spread good vibes!</string>
+    <string name="engage_positively">Engage Positively</string>
+    <string name="stay_safe">Stay Safe</string>
+    <string name="verify_identity">Verify Identity</string>
+    <string name="to_maintain_this_safe_and_inclusive_space">To maintain this safe and inclusive space, we ask that all members follow our</string>
+    <string name="protect_your_personal_information_and_report">Protect your personal information and report any suspicious behavior.</string>
+    <string name="treat_everyone_with_dignity">Treat everyone with dignity, regardless of their background, beliefs, or identity.</string>
+    <string name="respect_others">Respect Others</string>
+    <string name="show_your_true_and_honest_self">Show your true self! Honest profiles create stronger, genuine connections.</string>
+    <string name="be_yourself">Be Yourself</string>
+    <string name="creating_meaningful_connections_together">Creating Meaningful Connections Together.</string>
+    <string name="welcome_to_lovorise">Welcome to Lovorise.</string>
+    <string name="i_understand_it_wont_happen_again">I understand, it won’t happen again</string>
+    <string name="tap_to_verify">Tap to verify</string>
+    <string name="we_have_identified_inappropriate_activity_result_in_ban">We have identified inappropriate activity that may result in the ban of your account. For information on what is allowed on Lovorise, check out to our</string>
+    <string name="please_note_if_subscribed_cancel_subscription_with_provider">Please note that if you are subscribed to any premium services through the App Store or Google Play, you will need to cancel your subscription with the appropriate provider.</string>
+    <string name="does_not_sound_right">Doesn't sound right? Please</string>
+    <string name="get_verified_badge_message">Use photo to prove that you are the genuine you. If the photo matches your profile, we'll give you a tick to display your verified status. We will not use this photo on your profile; it is only for verifying your identification.</string>
+    <string name="get_the_verified_badge">Get the Verified Badge</string>
+    <string name="copy_the_pose_in_photo">Record a short video selfie</string>
+    <string name="your_account_has_been_banned_from_lovorise">Your Account Has Been Banned From Lovorise</string>
+    <string name="we_want_everyone_feel_safe_and_welcome_chose_to_remove_you">We want everyone to feel safe and welcome at Lovorise. We have chose to remove you from the Lovorise platform after discovering that you violated our</string>
+    <string name="profile_verification_required">Profile Verification Required</string>
+    <string name="get_a_photo_verification_badge_for_your_profile">Get a photo verification badge for your profile.</string>
+    <string name="prove_to_people_that_you_r_genuine">Prove to people that you are a genuine person.</string>
+    <string name="get_back_completing_video_selfie">Get back in by completing a video selfie verification.</string>
+    <string name="if_you_do_not_your_account_will_be_closed_after_two_years">If you don’t, your account will be closed after 2 years.</string>
+    <string name="we_locked_your_profile_temporarily_due_to_recent_activities">We have locked your account temporarily due to recent activities. Your profile is currently hidden and not visible to other Lovorise users.</string>
+    <string name="only_premium_user_with_photo_verification_can_hide">Only premium users with photo verification can hide images/videos from their profiles.</string>
+    <string name="review_requests">Review Requests</string>
+    <string name="no_unlock_requests_at_the_moment">No unlock requests at the moment. Requests will appear here when other users request to view your hidden images.</string>
+    <string name="unlock_requests">Unlock requests</string>
+    <string name="control_your_privacy">Control your privacy</string>
+    <string name="hide_all">Hide All</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="send">Send</string>
+    <string name="profile_status">Profile Status</string>
+    <string-array name="profile_status_items">
+        <item>All people</item>
+        <item>Active people only</item>
+        <item>Recently active</item>
+    </string-array>
+    <string-array name="sort_by_options">
+        <item>All</item>
+        <item>Best matches</item>
+        <item>New members</item>
+    </string-array>
+    <string name="advanced_filters_for_more_specific_results">Advanced filters for more specific results; get more precise and personalized matches, tailored to your preferences.</string>
+    <string name="access_essential_filters_to_find_ideal_match">Access essential filters to find your ideal match. Upgrade to premium for advanced filters.</string>
+    <string name="filters">Filters</string>
+    <string name="reporting_and_blocking">Reporting &amp; Blocking</string>
+    <string name="safety_tips_for_online_dating">Safety Tips for Online Dating</string>
+    <string name="stay_safe_with_lovorise">Stay Safe with Lovorise</string>
+    <string name="safety_center">Safety Center</string>
+    <string name="learn_more">Learn more</string>
+    <string name="report_a_problem">Report a problem</string>
+    <string name="account_and_payment">Account &amp; Payment</string>
+    <string name="hide_my_photos_and_videos">Hide my photos and videos</string>
+    <string name="the_user_will_be_notified_of_your_request">The user will be notified of your request and can choose to accept or decline.</string>
+    <string name="send_unlock_request_for_image">Send an unlock request for this image?</string>
+    <string name="send_unlock_request_for_video">Send an unlock request for this video?</string>
+    <string name="ask_anything">Ask anything!</string>
+    <string name="stand_out_with_gifts">Stand out with gifts</string>
+    <string name="express_your_feelings_by_sending_gift">Express your feelings by sending a special gift!</string>
+    <string name="add_a_comment">Add a comment...</string>
+    <string name="temp_skip">Temporary Skip</string>
+    <string name="convert">Convert</string>
+    <string name="gift">Gift</string>
+    <string name="converted_gift">Converted gift</string>
+    <string name="gift_from">Gift from</string>
+    <string name="this_action_cannot_be_undone">This action can not be undone.</string>
+    <string name="convert_gift_to_hearts">Convert Gift to Hearts</string>
+    <string name="delete_message">Delete message</string>
+    <string name="message_deleted">Message deleted </string>
+    <string name="are_you_sure_want_to_delete_msg">Are you sure you want to delete this message?</string>
+    <string name="delete_for_user">Also delete for %1$s</string>
+    <string name="convert_to_hearts">Convert to %1$s hearts</string>
+    <string name="temp_skip_profile_message">Swiping a profile to down means that you want to skip for now!</string>
+    <string name="no_transactions_yet">No Transactions Yet</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="your_transaction_history_is_empty">Your transaction history is empty or try adjusting filters.</string>
+    <string-array name="transaction_tabs">
+        <item>All</item>
+        <item>Incoming</item>
+        <item>Outgoing</item>
+    </string-array>
+    <string name="you_are_using_lovorise_offline">You're using Lovorise offline</string>
+    <string name="you_are_back_online">You're back online</string>
+    <string name="you_are_offline_check_connection">You’re offline. Check your connection.</string>
+    <string name="connect_to_internet">Connect to the Internet</string>
+    <string name="tap_to_retry">Tap to retry</string>
+    <string name="transaction_type">Transaction type</string>
+    <string name="choose_time">Choose time</string>
+    <string name="start_date">Start date</string>
+    <string name="one_time_payment">One-time payment</string>
+    <string name="you_last_signed_with_google">You last signed in with Google</string>
+    <string name="you_last_signed_with_apple">You last signed in with Apple</string>
+    <string name="you_last_signed_using_email">You last signed in using Email</string>
+    <string-array name="transaction_types">
+        <item>All type</item>
+        <item>In-app purchase</item>
+        <item>Unlocked hearts</item>
+        <item>Gifts</item>
+        <item>Rewards</item>
+    </string-array>
+    <string-array name="chat_options">
+        <item>New message</item>
+        <item>Select chats</item>
+        <item>Read all</item>
+    </string-array>
+    <string-array name="self_destruct_options">
+        <item>1 week</item>
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>6 months</item>
+    </string-array>
+    <string name="new_message">New message</string>
+    <string name="chats">Chats</string>
+    <string name="chats1">Chats1</string>
+    <string name="active_sessions">Active sessions</string>
+    <string name="session_self_destruct">Session self-destruct</string>
+    <string name="sign_out_all_devices_expect_this_one">Sign out all devices except this one.</string>
+    <string name="terminate_all_other_sessions">Terminate all other sessions</string>
+    <string name="take_a_video_selfie">Take a video selfie with a handwritten note</string>
+    <string name="submit_your_verification_video">Submit your verification video selfie</string>
+    <string name="open_to_everyone">I'm open to everyone</string>
+    <string name="waiting_for_network">Waiting for network...</string>
+    <string name="connecting">Connecting...</string>
+    <string name="offline">Offline</string>
+    <string name="devices">Devices</string>
+    <string name="automatically_terminate_old_sessions">Automatically terminate old sessions</string>
+    <string name="if_inactive_for">If inactive for</string>
+    <string name="the_lovorise_app_is_available_for_android_and_ios">The official Lovorise app is available for Android and iPhone.</string>
+    <string name="no_other_active_sessions">No other active sessions</string>
+    <string name="not_now">Not now</string>
+    <string name="this_device">This device</string>
+    <string name="manage_device">Manage devices</string>
+    <string name="we_will_show_you_people_who_match_vibe_outside_your_range">We’ll show you people who match your vibe, but you’ll still able to match with people outside your range.</string>
+    <string name="turn_on_notification">Turn on notification so we can let you know when you have new matches, likes or messages.</string>
+    <string name="don_t_miss_a_beat">Don’t miss a beat,or a match</string>
+    <string name="your_privacy_comes_first">Your privacy comes first</string>
+    <string name="when_you_match_with_more_people">When you match with more people they’ll appear here.</string>
+    <string name="you_are_offline_connect_to_internet">You’re currently offline. Please connect to the internet in order to make calls.</string>
+</resources>

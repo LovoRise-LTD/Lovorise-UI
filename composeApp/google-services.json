@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "336047348208",
+    "project_id": "lovorise-663b2",
+    "storage_bucket": "lovorise-663b2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336047348208:android:f6070a5dc7e41c2c582535",
+        "android_client_info": {
+          "package_name": "com.lovoriseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVtSgOoOucZj_Zq2pFtHnX8eT82p46V38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

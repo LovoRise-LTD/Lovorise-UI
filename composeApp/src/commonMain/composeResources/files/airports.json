@@ -1,0 +1,167 @@
+[
+  {
+    "country": "United States",
+    "city": "New York",
+    "airport_name": "John F. Kennedy International Airport"
+  },
+  {
+    "country": "United States",
+    "city": "Los Angeles",
+    "airport_name": "Los Angeles International Airport"
+  },
+  {
+    "country": "United Kingdom",
+    "city": "London",
+    "airport_name": "Heathrow Airport"
+  },
+  {
+    "country": "France",
+    "city": "Paris",
+    "airport_name": "Charles de Gaulle Airport"
+  },
+  {
+    "country": "Germany",
+    "city": "Frankfurt",
+    "airport_name": "Frankfurt am Main Airport"
+  },
+  {
+    "country": "Germany",
+    "city": "Munich",
+    "airport_name": "Munich Airport"
+  },
+  {
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "airport_name": "Amsterdam Schiphol Airport"
+  },
+  {
+    "country": "Spain",
+    "city": "Madrid",
+    "airport_name": "Adolfo Suárez Madrid–Barajas Airport"
+  },
+  {
+    "country": "Italy",
+    "city": "Rome",
+    "airport_name": "Leonardo da Vinci–Fiumicino Airport"
+  },
+  {
+    "country": "Switzerland",
+    "city": "Zurich",
+    "airport_name": "Zurich Airport"
+  },
+  {
+    "country": "Austria",
+    "city": "Vienna",
+    "airport_name": "Vienna International Airport"
+  },
+  {
+    "country": "Turkey",
+    "city": "Istanbul",
+    "airport_name": "Istanbul Airport"
+  },
+  {
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "airport_name": "Dubai International Airport"
+  },
+  {
+    "country": "Qatar",
+    "city": "Doha",
+    "airport_name": "Hamad International Airport"
+  },
+  {
+    "country": "Japan",
+    "city": "Tokyo",
+    "airport_name": "Haneda Airport"
+  },
+  {
+    "country": "Japan",
+    "city": "Osaka",
+    "airport_name": "Kansai International Airport"
+  },
+  {
+    "country": "China",
+    "city": "Beijing",
+    "airport_name": "Beijing Capital International Airport"
+  },
+  {
+    "country": "China",
+    "city": "Shanghai",
+    "airport_name": "Shanghai Pudong International Airport"
+  },
+  {
+    "country": "Singapore",
+    "city": "Singapore",
+    "airport_name": "Changi Airport"
+  },
+  {
+    "country": "South Korea",
+    "city": "Seoul",
+    "airport_name": "Incheon International Airport"
+  },
+  {
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "airport_name": "Hazrat Shahjalal International Airport"
+  },
+  {
+    "country": "Bangladesh",
+    "city": "Chattogram",
+    "airport_name": "Shah Amanat International Airport"
+  },
+  {
+    "country": "Bangladesh",
+    "city": "Sylhet",
+    "airport_name": "Osmani International Airport"
+  },
+  {
+    "country": "India",
+    "city": "Mumbai",
+    "airport_name": "Chhatrapati Shivaji Maharaj International Airport"
+  },
+  {
+    "country": "India",
+    "city": "Delhi",
+    "airport_name": "Indira Gandhi International Airport"
+  },
+  {
+    "country": "Thailand",
+    "city": "Bangkok",
+    "airport_name": "Suvarnabhumi Airport"
+  },
+  {
+    "country": "Australia",
+    "city": "Sydney",
+    "airport_name": "Sydney Kingsford Smith Airport"
+  },
+  {
+    "country": "Canada",
+    "city": "Toronto",
+    "airport_name": "Toronto Pearson International Airport"
+  },
+  {
+    "country": "Brazil",
+    "city": "São Paulo",
+    "airport_name": "São Paulo/Guarulhos International Airport"
+  },
+  {
+    "country": "Mexico",
+    "city": "Mexico City",
+    "airport_name": "Felipe Ángeles International Airport"
+  },
+  {
+    "country": "South Africa",
+    "city": "Johannesburg",
+    "airport_name": "O. R. Tambo International Airport"
+  },
+  {
+    "country": "Kenya",
+    "city": "Nairobi",
+    "airport_name": "Jomo Kenyatta International Airport"
+  },
+  {
+    "country": "Egypt",
+    "city": "Cairo",
+    "airport_name": "Cairo International Airport"
+  }
+]

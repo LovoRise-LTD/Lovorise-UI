@@ -1,0 +1,9 @@
+package com.lovorise.app.libs.reels
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+
+@Composable
+actual fun VideoThumbnailImageView(modifier: Modifier,imgData:Any){
+
+}

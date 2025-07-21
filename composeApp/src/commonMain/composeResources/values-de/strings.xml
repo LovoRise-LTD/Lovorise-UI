@@ -1,0 +1,727 @@
+<resources>
+    <string name="app_name">Lovorise</string>
+    <string name="add_your_best_photos">Fügen Sie Ihre besten Fotos hinzu</string>
+    <string name="create_password">Passwort erstellen</string>
+    <string name="password">Passwort</string>
+    <string name="choose_photo">Foto auswählen</string>
+    <string name="gallery">Galerie</string>
+    <string name="save">Speichern</string>
+    <string name="camera_permissions_required">Kameraberechtigungen erforderlich</string>
+    <string name="photo_permissions_required">Fotoberechtigungen erforderlich</string>
+    <string name="please_grant">Bitte erteilen Sie</string>
+    <string name="saving">Speichern</string>
+    <string name="your_password_must_have_at_least">Ihr Passwort muss mindestens enthalten:</string>
+    <string name="six_characters_max_twenty">6 Zeichen (maximal 20)</string>
+    <string name="one_letter_one_number">1 Buchstabe und 1 Zahl</string>
+    <string name="one_special_character">1 Sonderzeichen (z. B.: # \$ % &amp; * @)</string>
+    <string name="sign_in">Anmelden</string>
+    <string name="sign_up">Registrieren</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="delete_photo">Foto löschen</string>
+    <string name="change_photo">Foto ändern</string>
+    <string name="upload_a_photo">Ein Foto hochladen</string>
+    <string name="take_a_photo">Ein Foto aufnehmen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="email">E-Mail</string>
+    <string name="next">Weiter</string>
+    <string name="we_will_email_you_a_code_to_reset_your_password">Wir senden Ihnen einen Code per E-Mail, um Ihr Passwort zurückzusetzen.</string>
+    <string name="verify_email">E-Mail verifizieren</string>
+    <string name="if_we_found_an_account_email_has_been_sent">Falls wir ein Konto mit %1$s gefunden haben, wurde eine E-Mail gesendet.</string>
+    <string name="please_check_your_email_in_a_moment">Bitte überprüfen Sie in Kürze Ihre E-Mails</string>
+    <string name="check_your_email">Überprüfen Sie Ihre E-Mail</string>
+    <string name="did_not_get_code">Keinen Code erhalten?</string>
+    <string name="resend_code">Code erneut senden</string>
+    <string name="rising_of_a_love_story">AUFSTIEG EINER\nLIEBESGESCHICHTE</string>
+    <string name="send_code">Code senden</string>
+    <string name="verify">Verifizieren</string>
+    <string name="terms">Bedingungen</string>
+    <string name="continue_with_gmail">Mit Gmail fortfahren</string>
+    <string name="by_signing_up_you_agree_to_our">Mit Ihrer Anmeldung stimmen Sie unseren</string>
+    <string name="learn_how_we_use_your_data">Erfahren Sie, wie wir Ihre Daten in unserer</string>
+    <string name="continue_with_apple">Mit Apple fortfahren</string>
+    <string name="privacy_policy">Datenschutzrichtlinie</string>
+    <string name="sign_in_to">Anmelden bei</string>
+    <string name="lovorise">Lovorise</string>
+    <string name="forgot_password">Passwort vergessen?</string>
+    <string name="enter_valid_email_or_password">Geben Sie eine gültige E-Mail-Adresse oder ein Passwort ein</string>
+    <string name="or">oder</string>
+    <string name="you_are">Sie sind</string>
+    <string name="you_entered">Sie haben eingegeben</string>
+    <string name="confirm_your_age_is_correct">Bestätigen Sie, dass Ihr Alter korrekt ist.</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="leave">Verlassen</string>
+    <string name="skip">Überspringen</string>
+    <string name="read_our">Lesen Sie unsere</string>
+    <string name="terms_and_conditions">Allgemeine Geschäftsbedingungen</string>
+    <string name="how_old_are_you">Wie alt sind Sie?</string>
+    <string name="choose_your_dob">Wählen Sie Ihr Geburtsdatum aus.</string>
+    <string name="over_eighteen_only">Nur über 18-Jährige</string>
+    <string name="over_eighteen_verify_with_id">Über 18? Verifizieren Sie Ihr Alter mit Ihrem Ausweis</string>
+    <string name="eighteen_plus_info">Lovorise ist für Personen ab 18 Jahren. Wir freuen uns, Sie zu sehen, wenn Sie 18 werden!</string>
+    <string-array name="months">
+        <item>Januar</item>
+        <item>Februar</item>
+        <item>März</item>
+        <item>April</item>
+        <item>Mai</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>August</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Dezember</item>
+    </string-array>
+    <string name="show_more">Mehr anzeigen</string>
+    <string name="camera">Kamera</string>
+    <string name="to_change_email">Um die E-Mail zu ändern, geben Sie bitte Ihr Konto-Login-Passwort zur Verifizierung ein</string>
+    <string name="verify_password">Passwort verifizieren</string>
+    <string name="your_email_has_been_reset">Ihre E-Mail wurde erfolgreich zurückgesetzt</string>
+    <string name="stay_logged_in">Angemeldet bleiben</string>
+    <string name="add_email">E-Mail hinzufügen</string>
+    <string name="reset_email">E-Mail zurücksetzen</string>
+    <string name="photo">Foto</string>
+    <string name="verification_code_invalid">Verifizierungscode ist ungültig</string>
+    <string name="cannot_access_this_email">Kein Zugriff auf diese E-Mail-Adresse?</string>
+    <string name="hold_drag_to_reorder">Halten &amp; ziehen, um neu anzuordnen.</string>
+    <string name="let_add_one_photo_to_start">Lassen Sie uns 1 Foto hinzufügen, um zu starten</string>
+    <string name="permissions_in_your_settings">Berechtigungen in Ihren Einstellungen.</string>
+    <string name="show_less">Weniger anzeigen</string>
+    <string name="provide_a_valid_email">Geben Sie eine gültige E-Mail an</string>
+    <string name="please_enter_a_valid_email">Bitte geben Sie eine gültige E-Mail ein.</string>
+    <string name="receive_marketing_emails">Wenn Sie keine Marketing-E-Mails über unsere Produkte und Dienstleistungen erhalten möchten, markieren Sie bitte dieses Kästchen.</string>
+    <string name="choose_your_interests">Wählen Sie Ihre Interessen</string>
+    <string name="get_better_recommendation_by_selecting_more_interests">Erhalten Sie bessere Empfehlungen, indem Sie 5+ Interessen auswählen.</string>
+    <string name="search_interest">Interesse suchen</string>
+    <string name="add_interests">Interessen hinzufügen</string>
+    <string name="how_often_you_smoke">Wie oft rauchen Sie?</string>
+    <string name="enter_code_sent_to_your_email">Bitte geben Sie den Code ein, der an Ihre E-Mail gesendet wurde</string>
+    <string name="no_result_for_interest">Keine Ergebnisse gefunden. Versuchen Sie es mit anderen Suchbegriffen oder erkunden Sie weitere Interessen.</string>
+    <string name="no_result_for_language">Keine Ergebnisse gefunden. Versuchen Sie es mit anderen Suchbegriffen oder erkunden Sie andere Sprachen.</string>
+    <string-array name="dating_preferences">
+        <item>Lebenspartner</item>
+        <item>Langfristige Beziehung</item>
+        <item>Lockere Beziehung</item>
+        <item>Neue Freunde</item>
+        <item>Ich finde es noch heraus</item>
+    </string-array>
+    <string name="choose_option_that_feels_right">Wählen Sie eine Option, die sich für Sie richtig anfühlt.</string>
+    <string name="dating_preference">Beziehungsvorlieben</string>
+    <string name="how_often_do_you_drink">Wie oft trinken Sie Alkohol?</string>
+    <string name="what_is_you_education_level">Wie ist Ihr Bildungsstand?</string>
+    <string name="what_you_want_in_family_planning">Was möchten Sie in der Familienplanung?</string>
+    <string name="enter_six_digit_code">Geben Sie den 6-stelligen Code ein</string>
+    <string name="about_your_gender">Über Ihr Geschlecht</string>
+    <string name="tell_something_missing">Sagen Sie uns, wenn etwas fehlt.</string>
+    <string name="describe_here">Beschreiben Sie hier ...</string>
+    <string name="gender">Geschlecht</string>
+    <string name="write_something_fun">Schreiben Sie etwas Lustiges...</string>
+    <string name="enable_location">Standort aktivieren</string>
+
+    <string name="open_settings">Einstellungen öffnen</string>
+    <string name="what_is_your_religion">Was ist deine Religion?</string>
+    <string name="let_us_know_your_location">Teilen Sie uns Ihren Standort mit</string>
+    <string name="set_your_location_to_see_who_is_nearby">Legen Sie Ihren Standort fest, um zu sehen, wer in der Nähe oder darüber hinaus ist.Sie können mit niemand anderem übereinstimmen.</string>
+    <string name="i_agree">Ich stimme zu</string>
+    <string name="who_would_you_like_to_meet">Wen möchten Sie treffen?</string>
+    <string name="how_tall_are_you">Wie groß sind Sie?</string>
+    <string name="you_will_only_be_shown_to_people_looking_to_date_your_gender">Sie werden nur Personen angezeigt, die daran interessiert sind, Ihr Geschlecht zu daten.</string>
+    <string name="what_languages_do_you_know">Welche Sprachen sprechen Sie?</string>
+    <string name="select_up_to_five">Wählen Sie bis zu 5 aus.</string>
+    <string name="search_languages">Sprachen suchen</string>
+    <string name="name">Name</string>
+    <string name="prompt">Aufforderung</string>
+    <string name="continue_editing">Weiter bearbeiten</string>
+    <string name="discard_post">Beitrag verwerfen</string>
+    <string name="your_reel_is_not_saved">Ihr Reel wurde nicht gespeichert</string>
+    <string name="please_select_three_interest_to_save">Bitte wählen Sie mindestens 3 Interessen aus, um zu speichern</string>
+    <string name="enter_real_name">Geben Sie den Namen ein, den Sie im wirklichen Leben verwenden.</string>
+    <string name="guidelines">Richtlinien</string>
+    <string name="create">Erstellen</string>
+    <string name="answer_prompt">Antworten Sie auf die Aufforderung</string>
+    <string name="select_a_prompt">Wählen Sie eine Aufforderung aus</string>
+    <string name="building_safe_dating_community">Eine sichere\nDating-Community aufbauen</string>
+    <string-array name="text_prompts">
+        <item>Das Spontanste, was ich je gemacht habe, ist:</item>
+        <item>Mein ultimatives Comfort-Food ist:</item>
+        <item>Der beste Ratschlag, den ich je erhalten habe, ist:</item>
+        <item>Meine Guilty-Pleasure-TV-Show ist:</item>
+        <item>Ein Traumziel, das ich noch nicht besucht habe, ist:</item>
+        <item>Das Buch, das mein Leben verändert hat, ist:</item>
+        <item>Meine Lieblingsbeschäftigung am Wochenende ist:</item>
+        <item>Das ungewöhnlichste Hobby, das ich habe, ist:</item>
+        <item>Mein Seelentier ist:</item>
+        <item>Das beste Konzert, das ich je besucht habe, war:</item>
+        <item>Ich könnte stundenlang über ... reden:</item>
+        <item>Mein idealer Samstagabend sieht so aus:</item>
+        <item>Die Superkraft, die ich gerne hätte, ist:</item>
+        <item>Wenn ich in einer beliebigen Epoche leben könnte, wäre es:</item>
+        <item>Mein größter Nervfaktor ist:</item>
+    </string-array>
+    <string-array name="voice_prompts">
+        <item>Mein Lieblings-Karaoke-Song ist...</item>
+        <item>Wenn ich Zeitreisen könnte, würde ich nach...</item>
+        <item>Eine lustige Tatsache über mich, die die meisten Menschen nicht wissen...</item>
+        <item>Der beste Ratschlag, den ich je erhalten habe...</item>
+        <item>Der Film, der mein Leben am besten beschreibt, ist...</item>
+        <item>Mein verstecktes Talent ist...</item>
+        <item>Das Erste, was die Leute an mir bemerken, ist...</item>
+        <item>Das letzte Buch, das ich nicht aus der Hand legen konnte, war...</item>
+        <item>Ich werde nie müde von...</item>
+    </string-array>
+    <string-array name="video_prompts">
+        <item>Ein Tag in meinem Leben sieht so aus...</item>
+        <item>Mein perfektes Wochenende wäre...</item>
+        <item>Ich zeige Ihnen etwas, das mir wichtig ist...</item>
+        <item>Eine Fähigkeit, auf die ich stolz bin...</item>
+        <item>Das letzte Mal, als ich wirklich laut gelacht habe, war...</item>
+        <item>Lassen Sie uns über mein Lieblingshobby sprechen...</item>
+        <item>Das Abenteuerlichste, was ich je gemacht habe, ist...</item>
+        <item>Was ich bei einem Partner suche...</item>
+        <item>Wenn ich mit jemandem Abendessen könnte, wäre es...</item>
+    </string-array>
+    <string-array name="genders">
+        <item>Mann</item>
+        <item>Frau</item>
+        <item>Nicht-binär</item>
+    </string-array>
+    <string-array name="prompt_tabs">
+        <item>Text</item>
+        <item>Sprache</item>
+        <item>Video</item>
+    </string-array>
+    <string name="welcome_message">Willkommen! Wir freuen uns, Teil unserer Community zu sein.\n\nHier auf Lovorise schätzen wir Freundlichkeit und Respekt gegenüber allen, unabhängig von ihrem Hintergrund, ihren Überzeugungen oder ihrer Identität.\n\nUm Lovorise zu einem sicheren und integrativen Ort zu machen, befolgen Sie bitte unsere</string>
+    <string name="help_message">\nUnser Team ist immer für Sie da, wenn Sie Hilfe benötigen.\n\nMit Liebe, Ihr Lovorise-Team.</string>
+    <string-array name="more_gender_options">
+        <item>Bigender</item>
+        <item>Nicht-binärer Mann</item>
+        <item>Nicht-binäre Frau</item>
+        <item>Polygender</item>
+        <item>Transgender</item>
+        <item>Trans-Mann</item>
+        <item>Trans-Frau</item>
+    </string-array>
+
+    <string name="add_more_about_your_gender">Füge mehr über dein Geschlecht hinzu</string>
+    <string name="pick_gender_that_describe_you">Wähle das Geschlecht, das dich am besten beschreibt.</string>
+    <string name="save_and_close">Speichern und schließen</string>
+    <string-array name="drink_preferences">
+        <item>Nicht für mich</item>
+        <item>Neugierig auf Abstinenz</item>
+        <item>Gesellschaftlich</item>
+        <item>Zu besonderen Anlässen</item>
+        <item>Neu abstinent</item>
+    </string-array>
+    <string-array name="education_levels">
+        <item>Bachelorabschluss</item>
+        <item>An der Universität</item>
+        <item>College</item>
+        <item>Doktortitel</item>
+        <item>Im Graduiertenprogramm</item>
+        <item>Masterabschluss</item>
+        <item>Sonstiges</item>
+    </string-array>
+    <string-array name="children_preferences">
+        <item>Möchte Kinder</item>
+        <item>Möchte keine Kinder</item>
+        <item>Offen für Kinder</item>
+        <item>Habe Kinder</item>
+        <item>Noch nicht sicher</item>
+        <item>Bevorzuge keine Angabe</item>
+    </string-array>
+    <string-array name="who_would_you_like_to_meet_options">
+        <item>Alle</item>
+        <item>Männer</item>
+        <item>Frauen</item>
+        <item>Nicht-binär</item>
+    </string-array>
+    <string-array name="languages">
+        <item>Englisch</item>
+        <item>Punjabi</item>
+        <item>Spanisch</item>
+        <item>Französisch</item>
+        <item>Hindi</item>
+        <item>Deutsch</item>
+        <item>Chinesisch</item>
+        <item>Japanisch</item>
+        <item>Koreanisch</item>
+        <item>Russisch</item>
+        <item>Portugiesisch</item>
+        <item>Italienisch</item>
+        <item>Arabisch</item>
+        <item>Bengalisch</item>
+        <item>Türkisch</item>
+        <item>Vietnamesisch</item>
+        <item>Persisch</item>
+        <item>Swahili</item>
+        <item>Thailändisch</item>
+        <item>Niederländisch</item>
+        <item>Griechisch</item>
+        <item>Malaiisch</item>
+        <item>Hebräisch</item>
+        <item>Polnisch</item>
+        <item>Ukrainisch</item>
+        <item>Tamil</item>
+        <item>Urdu</item>
+        <item>Filipino</item>
+        <item>Indonesisch</item>
+        <item>Rumänisch</item>
+        <item>Ungarisch</item>
+    </string-array>
+    <string-array name="religions">
+        <item>Muslim</item>
+        <item>Hindu</item>
+        <item>Christ</item>
+        <item>Sikh</item>
+        <item>Buddhist</item>
+        <item>Spirituell</item>
+        <item>Atheist</item>
+        <item>Sonstiges</item>
+    </string-array>
+    <string-array name="smoking_preferences">
+        <item>Nichtraucher</item>
+        <item>Raucher</item>
+        <item>Gelegenheitsraucher</item>
+        <item>Neu-Raucher</item>
+    </string-array>
+    <string-array name="tab_options">
+        <item>Neu</item>
+        <item>Alle</item>
+    </string-array>
+    <string name="unmatch">Entmatchen</string>
+    <string name="block">Blockieren</string>
+    <string name="report">Melden</string>
+    <string name="delete_conversation">Unterhaltung löschen</string>
+    <string name="get_swiping">Los swipen</string>
+    <string name="no_conversations_text">Wenn du mit anderen übereinstimmst, erscheinen sie hier. Hier kannst du ihnen eine Nachricht senden.</string>
+    <string name="likes">Likes</string>
+    <string name="matches">Matches</string>
+    <string name="see_all">Alle ansehen</string>
+    <string name="reply">Antworten</string>
+    <string name="your_password_has_been_reset">Dein Passwort wurde erfolgreich zurückgesetzt</string>
+    <string name="change_password">Passwort ändern</string>
+    <string name="reset_password">Passwort zurücksetzen</string>
+    <string name="current_password">Aktuelles Passwort</string>
+    <string name="enter_new_password">Neues Passwort eingeben</string>
+    <string name="do_you_want_to_unblock">Möchtest du entsperren</string>
+    <string name="people_you_have_blocked">Personen, die du blockiert hast, erscheinen hier.</string>
+    <string name="blocked_people">Blockierte Personen</string>
+    <string name="message">Nachricht</string>
+    <string name="messages">Nachrichten</string>
+    <string name="search">Suche</string>
+    <string name="ringing">Klingelt</string>
+    <string name="return_to_the_call">Zum Anruf zurückkehren...</string>
+    <string name="you_matched_with">Du hast ein Match mit</string>
+    <string name="sure_want_to_delete_messages">Bist du sicher, dass du diese Nachrichten löschen möchtest?</string>
+    <string name="sure_want_to_unblock">Bist du sicher, dass du entsperren möchtest</string>
+    <string name="sure_want_to_block">Bist du sicher, dass du blockieren möchtest</string>
+    <string name="unblock_this_user">Diesen Benutzer entsperren</string>
+    <string name="sure_want_to_unmatch">Bist du sicher, dass du das Match aufheben möchtest von</string>
+    <string name="delete">Löschen</string>
+    <string name="unblock">Entsperren</string>
+    <string name="new">Neu</string>
+    <string name="all">Alle</string>
+    <string name="liked_you">Hat dich geliked</string>
+    <string name="see_who_liked_you">Sieh, wer dich geliked hat</string>
+    <string name="your_interests">Deine Interessen</string>
+    <string name="when_you_like_someone_you_find_here">Wenn du jemanden likest, findest du sie genau hier</string>
+    <string name="see_your_matches">Sieh deine Matches</string>
+    <string name="coins">Münzen</string>
+    <string name="maybe_later">Vielleicht später</string>
+    <string name="bonus">Bonus</string>
+    <string name="backtrack">Zurückverfolgen</string>
+    <string name="backtrack_to_last_swipe">Zum letzten Swipe zurückverfolgen</string>
+    <string name="use_coins">Münzen verwenden</string>
+    <string name="ok">OK</string>
+    <string name="onboarding">Onboarding</string>
+    <string name="invited">Eingeladen</string>
+    <string name="copied_link_to_clipboard">Link in die Zwischenablage kopiert</string>
+    <string name="copy_link">Link kopieren</string>
+    <string name="invite_and_get_rewards">Freunde einladen &amp; Belohnungen erhalten!</string>
+    <string name="invite_friends">Freunde einladen</string>
+    <string name="daily_login_rewards">Tägliche Anmeldebelohnungen</string>
+    <string name="coin_balance">Münzkontostand</string>
+    <string name="buy_coins">Münzen kaufen</string>
+    <string name="continue_txt">Weiter</string>
+    <string name="submit">Absenden</string>
+    <string name="subscription">Abonnement</string>
+    <string name="lovorise_platinum">Lovorise Platinum</string>
+    <string name="enjoy_ultimate_perks">Genießen Sie ultimative Vorteile und unvergleichbare Sichtbarkeit, um aufzufallen.</string>
+    <string name="unlock_essential_features">Schalten Sie wesentliche Funktionen frei für ein verbessertes Dating-Erlebnis.</string>
+    <string name="interests">Interessen</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="status">Status</string>
+    <string name="subscribed">Abonniert</string>
+    <string name="lovorise_premium">Lovorise Premium</string>
+    <string name="your_lovorise_premium">Dein Lovorise Premium</string>
+    <string name="cancel_subscription_message">Sind Sie sicher, dass Sie Ihr Premium-Abonnement kündigen möchten?\nWenn Sie kündigen, wird Ihnen am Verlängerungsdatum nichts berechnet. Sie haben weiterhin Zugriff auf Premium-Funktionen bis %1$s.</string>
+    <string name="get_coins">Münzen holen</string>
+    <string name="next_renewal_date">Nächstes Verlängerungsdatum</string>
+    <string name="pay_plan">Zahlungsplan</string>
+    <string name="cancel_subscription">Abonnement kündigen</string>
+    <string name="subscription_terms">Abonnementbedingungen</string>
+    <string name="super_spotlights">Super-Spotlights</string>
+    <string name="spotlights">Spotlights</string>
+    <string name="spotlight">Spotlight</string>
+    <string name="hours">Stunden</string>
+
+    <string name="aware_age_update">Ich bin mir bewusst, dass mein Alter nur einmal geändert werden kann. Danach muss ich ein Foto authentifizieren, um mein Alter zu ändern.</string>
+    <string name="aware_name_update">Ich bin mir bewusst, dass mein Name nur einmal geändert werden kann. Danach muss ich ein Foto authentifizieren, um meinen Namen zu ändern.</string>
+    <string name="age">Alter</string>
+    <string name="month">Monat</string>
+    <string name="active_until">Aktiv bis</string>
+    <string name="see_less_features">Weniger Funktionen anzeigen</string>
+    <string name="see_more_features">Mehr Funktionen anzeigen</string>
+    <string name="get_one_month_for">Erhalte 1 Monat für</string>
+    <string name="revisit_give_another_chance">Profile erneut besuchen und ihnen eine weitere Chance geben</string>
+    <string name="connect_with_people_from_other_cities_countries">Verbinde dich mit Menschen aus anderen Städten und Ländern</string>
+    <string name="browse_profiles_invisibly">Durchstöbere Profile unsichtbar, um deine Aktivitäten privat zu halten</string>
+    <string name="use_enhanced_filters_to_find">Nutze erweiterte Filter, um genau die Person zu finden, die du suchst</string>
+    <string name="see_who_is_checking_out_you">Sieh, wer dein Profil anschaut</string>
+    <string name="see_who_has_already_liked_you">Sieh, wer dich bereits geliked hat</string>
+    <string name="make_voice_calls_to_your_matches">Führe Sprachanrufe mit deinen Matches jederzeit</string>
+    <string name="swipe_many_profile_you_want">Wische durch so viele Profile, wie du möchtest</string>
+    <string name="boost_visibility_for">Sichtbarkeit erhöhen für</string>
+    <string name="and_auto_renew_unless_google_play">und automatische Verlängerung, es sei denn, du stornierst über die Google Play-Einstellungen.</string>
+    <string name="and_auto_renew_unless_app_store_settings">und automatische Verlängerung, bis du über die App-Store-Einstellungen stornierst.</string>
+    <string name="by_continuing_to_lovorise_premium">Indem du mit Lovorise Premium fortfährst, stimmst du den Lovorise</string>
+    <string name="by_continuing_to_lovorise_platinum">Mit dem Fortfahren zu Lovorise Platinum stimmen Sie den Lovorise</string>
+    <string name="how_did_you_hear_about_us">Wie hast du von uns erfahren?</string>
+    <string name="your_block_list_empty">Deine Blockliste ist leer</string>
+    <string name="block_user_message">Wenn sich jemand unangemessen verhält, kannst du ihn blockieren, um ein sicheres und angenehmes Erlebnis zu gewährleisten.</string>
+    <string name="welcome_to_lovorise_hearts_shop">Willkommen im Lovorise-Herzen-Shop</string>
+    <string name="try_power_ups_using_coins">Teste Power-ups mit Münzen</string>
+    <string name="by_tapping_ok_you_agree_to_the">Durch Tippen auf „OK“ stimmst du dem</string>
+    <string name="my_bio">Meine Bio</string>
+    <string name="visible">Sichtbar</string>
+    <string name="apply">Anwenden</string>
+    <string name="hearts">Herzen</string>
+    <string name="buy_hearts">Herzen kaufen</string>
+    <string name="reel_uploaded_successfully">Reel wurde erfolgreich hochgeladen!</string>
+    <string name="uploading">Wird hochgeladen</string>
+    <string name="views">Aufrufe</string>
+    <string name="no_view_yet">Noch keine Aufrufe!</string>
+    <string name="once_your_reel_gains_attention">Sobald dein Reel Aufmerksamkeit erregt, siehst du hier die Anzahl der Betrachter.</string>
+    <!--    <string name="resume_your_account_to_meet_new_people">Reaktivieren Sie Ihr Konto, um neue Leute kennenzulernen. Personen, die Ihnen bereits gefallen haben, können Ihr Profil weiterhin sehen und mit Ihnen übereinstimmen.</string>-->
+    <string name="your_personalized_feed_on_way">Ihr personalisierter Feed ist unterwegs!</string>
+    <string name="create_reel_message">Schauen Sie bald wieder vorbei für aufregende Reels, die nur für Sie erstellt wurden!</string>
+    <string name="reel_posted_successfully">Reel erfolgreich gepostet</string>
+    <string name="you_are_in_spotlight_message">Für die nächste Stunde wird Ihr Profil mehr Personen in Ihrer Nähe angezeigt! Beginnen Sie zu swipen, um Ihre Matches zu maximieren.</string>
+    <string name="you_are_in_super_spotlight_message">Für die nächsten 24 Stunden wird Ihr Profil mehr Personen in Ihrer Nähe angezeigt! Beginnen Sie zu swipen, um Ihre Matches zu maximieren.</string>
+    <string name="you_are_in_spotlight">Sie sind im Spotlight</string>
+    <string name="you_are_in_super_spotlight">Sie sind im Super-Spotlight</string>
+    <string name="you_have_not_created_any_reels_yet">Sie haben noch keine Reels erstellt!</string>
+    <string name="no_favorites_yet">Noch keine Favoriten!</string>
+    <string name="explore">Entdecken</string>
+    <string name="start_sharing_your_moment_creating_first_reel">Teilen Sie Ihre Momente, indem Sie Ihr erstes Reel erstellen.</string>
+    <string name="discover_amazing_reels_and_favorite">Entdecken Sie großartige Reels und fügen Sie sie zu Ihren Favoriten hinzu, indem Sie auf das Speichern-Symbol tippen.</string>
+    <string name="bio">Bio</string>
+    <string name="add_bio">Bio hinzufügen</string>
+    <string name="hidden">Versteckt</string>
+    <string name="edit_profile">Profil bearbeiten</string>
+    <string name="description">Beschreibung</string>
+    <string name="write_something">Schreibe etwas...</string>
+    <string name="what_is_your_name">Wie heißt du?</string>
+    <string name="add_job_title">Berufsbezeichnung hinzufügen</string>
+    <string name="always_visible_on_profile">Immer im Profil sichtbar</string>
+    <string name="visible_on_profile">Im Profil sichtbar</string>
+    <string name="complete_your_profile">Vervollständige dein Profil</string>
+    <string name="add_company_name">Unternehmens-/Institutsname hinzufügen</string>
+    <string name="what_is_your_profession">Was ist dein Beruf?</string>
+    <string name="do_you_have_any_pets">Hast du Haustiere?</string>
+    <string name="height">Größe</string>
+    <string name="education_level">Bildungsniveau</string>
+    <string name="your_profession">Dein Beruf</string>
+    <string name="show_me">Zeige mir</string>
+    <string name="age_range">Altersbereich</string>
+    <string name="location">Standort</string>
+    <string name="pets">Haustiere</string>
+    <string name="religion">Religion</string>
+    <string name="family_plans">Familienpläne</string>
+    <string name="drinking">Trinken</string>
+    <string name="smoking">Rauchen</string>
+    <string name="basics">Grundlagen</string>
+    <string name="complete_profile">Profil vervollständigen</string>
+    <string name="profile_visitors">Profilbesucher</string>
+    <string name="languages">Sprachen</string>
+    <string name="plans">Pläne</string>
+    <string name="share">Teilen</string>
+    <string name="link_copied">Link kopiert</string>
+    <string name="rate">Bewerten</string>
+    <string name="record_or_upload">Nimm ein 15-sekündiges Video auf oder lade es hoch, um es mit anderen zu teilen</string>
+    <string name="no_result_found_for_name">Keine Ergebnisse gefunden. Versuche es mit anderen Namen.</string>
+    <string name="inform">Informieren</string>
+    <string name="interested">Interessiert?</string>
+    <string name="done">Fertig</string>
+    <string name="do_you_want_to_block">Möchtest du blockieren</string>
+    <string name="add_photos">Fotos hinzufügen</string>
+    <string name="more_photos_in_your_profile_to_unlock">mehr Fotos in deinem Profil, um alle Fotos freizuschalten</string>
+    <string name="photos">Fotos</string>
+    <string name="videos">Videos</string>
+    <string name="reels">Reels</string>
+    <string name="logout">Abmelden</string>
+    <string name="this_email_will_be_used_for_login">Diese E-Mail wird für die Anmeldung und Passwortwiederherstellung verwendet</string>
+    <string name="enter_new_email">Neue E-Mail eingeben</string>
+    <string name="sort_by">Sortieren nach</string>
+    <string name="do_you_want_to_logout_now">Möchtest du dich jetzt abmelden?</string>
+    <string name="permanently_deleted_from_lovorise">dauerhaft aus Lovorise gelöscht.</string>
+    <string name="your_account">Dein Konto</string>
+    <string name="turn_on">Einschalten</string>
+    <string name="this_will_allow_you_to_take_photos_videos">Dies ermöglicht dir, Fotos zu machen und Videos aufzunehmen. Du kannst diese Berechtigung jederzeit in den Einstellungen deines Geräts ändern.</string>
+    <string name="to_take_photos_and_videos_we_need">Um Fotos und Videos aufzunehmen, benötigen wir Zugriff auf die Kamera deines Geräts</string>
+    <string name="swipe_up_for_more">Wische nach oben für mehr!</string>
+    <string name="add_to_favorites">Zu Favoriten hinzugefügt</string>
+    <string name="removed_from_favorites">Aus Favoriten entfernt</string>
+    <string name="for_you">Für dich</string>
+    <string name="my_reels">Meine Reels</string>
+    <string name="my_favourites">Meine Favoriten</string>
+    <string name="add_a_caption">Eine Bildunterschrift hinzufügen...</string>
+    <string name="let_us_know">Lass es uns wissen</string>
+    <string name="rate_app">App bewerten</string>
+    <string name="share_reels">Reels teilen</string>
+    <string name="share_reel">Reel teilen</string>
+    <string name="create_reels">Reels erstellen</string>
+    <string name="create_reel">Reel erstellen</string>
+    <string name="add_profession">Beruf hinzufügen</string>
+    <string name="distance_preference">Entfernungsvorlieben</string>
+    <string name="see_who_visited_your_profile">Sieh, wer dein Profil besucht hat</string>
+    <string name="unlimited">Unbegrenzt</string>
+    <string name="invite">Einladen</string>
+    <string name="claim">Beanspruchen</string>
+    <string name="write_a_bio">Eine Bio schreiben</string>
+    <string name="profile">Profil</string>
+    <string name="verify_photos">Fotos verifizieren</string>
+    <string name="upload_photos">Fotos hochladen</string>
+    <string name="do_you_enjoy_using_lovorise">Gefällt dir die Nutzung von Lovorise?</string>
+    <string name="upload">Hochladen</string>
+    <string name="we_appreciate_your_feedback">Wir schätzen dein Feedback und sind bestrebt, kontinuierliche Verbesserungen vorzunehmen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="we_would_love_to_hear_about_your_experience">Wir würden gerne von deinen Erfahrungen mit unserer App hören. Bitte nimm dir einen Moment Zeit, um uns deine Meinung mitzuteilen.</string>
+    <string name="post">Posten</string>
+
+    <string name="thanks_for_your_feedback">Danke für Ihr Feedback</string>
+    <string name="send_your_feedback">Senden Sie Ihr Feedback</string>
+    <string name="describe_here_your_personal_experience">Beschreiben Sie hier Ihre persönliche Erfahrung und Meinung über uns...</string>
+    <string name="write_a_comment_optional">Schreiben Sie einen Kommentar (optional)</string>
+    <string name="rate_your_experience">Bewerten Sie Ihre Erfahrung</string>
+    <string name="active">Aktiv</string>
+    <string name="we_will_show_fewer_reels_like_this">Wir werden weniger Reels wie diese zeigen</string>
+    <string name="visitors">Besucher</string>
+    <string name="great">Großartig</string>
+    <string name="nice">Schön</string>
+    <string name="satisfied">Zufrieden</string>
+    <string name="bad">Schlecht</string>
+    <string name="original_audio">Original-Audio</string>
+    <string name="average_txt">Durchschnittlich</string>
+    <string name="undo">Rückgängig</string>
+    <string name="away">weg</string>
+    <string name="new_here">Neu hier</string>
+    <string name="discovery">Entdeckung</string>
+    <string name="preferences">Einstellungen</string>
+    <string name="manage_account">Konto verwalten</string>
+    <string name="change_email">E-Mail ändern</string>
+    <string name="i_do_not_want_to_see_reels_from">Ich möchte keine Reels von diesem Konto sehen</string>
+    <string name="this_reel_make_me_uncomfortable">Dieser Reel macht mich unwohl</string>
+    <string name="report_reel">Reel melden</string>
+    <string name="please_select_reasons_for_reporting_this_reel">Bitte wählen Sie Gründe für die Meldung dieses Reels</string>
+    <string name="not_interested">Nicht interessiert</string>
+    <string name="swipe_profile_left_message">Wenn Sie ein Profil nach links wischen, bedeutet das, dass Sie kein Interesse haben.</string>
+    <string name="swipe_profile_right_message">Wenn Sie ein Profil nach rechts wischen, bedeutet das, dass Sie sich verbinden möchten!</string>
+    <string-array name="report_reels_reasons">
+        <item>Es ist Spam</item>
+        <item>Nacktheit oder sexuelle Aktivitäten</item>
+        <item>Hassrede oder Symbole</item>
+        <item>Falsche Informationen</item>
+        <item>Betrug oder Täuschung</item>
+        <item>Gewalt oder gefährliche Organisationen</item>
+        <item>Mobbing oder Belästigung</item>
+        <item>Selbstmord oder Selbstverletzung</item>
+        <item>Verkauf illegaler oder regulierter Waren</item>
+        <item>Verletzung des geistigen Eigentums</item>
+    </string-array>
+    <string-array name="delete_account_reasons">
+        <item>Ich habe jemanden kennengelernt</item>
+        <item>Ich brauche eine Pause von Lovorise</item>
+        <item>Sicherheits- oder Datenschutzbedenken</item>
+        <item>Ich habe mehrere Konten</item>
+    </string-array>
+    <string-array name="post_account_deletion_messages">
+        <item>Sie werden sich nicht mehr einloggen oder Lovorise-Dienste mit diesem Konto nutzen können</item>
+        <item>Sie verlieren den Zugriff auf all Ihre Matches</item>
+        <item>Informationen, die nicht in Ihrem Konto gespeichert sind, wie Direktnachrichten, werden für andere nicht sichtbar sein</item>
+        <item>Sie haben keine Möglichkeit, eine Rückerstattung für gekaufte oder erhaltene Artikel zu beantragen</item>
+    </string-array>
+    <string name="why_are_you_leaving_lovorise">Warum verlassen Sie Lovorise?</string>
+    <string name="we_are_sorry_see_you_go">Es tut uns leid, Sie gehen zu sehen! Wir würden gerne wissen, warum Sie Ihr Konto löschen möchten, damit wir die App verbessern und unsere Community unterstützen können.</string>
+    <string name="other_reason">Anderer Grund</string>
+    <string name="delete_account">Konto löschen</string>
+    <string name="pause_my_account">Mein Konto pausieren</string>
+    <string name="pause_my_account_caps">Mein Konto pausieren</string>
+    <string-array name="support_categories">
+        <item>App-Fehler</item>
+        <item>Operationen &amp; Zahlung</item>
+        <item>Vorschlag zur Verbesserung</item>
+    </string-array>
+    <string name="resume_my_account_caps">Mein Konto wieder aufnehmen</string>
+    <string name="pause_account_msg">Wenn Sie Ihr Konto behalten möchten, aber verhindern möchten, dass andere es sehen, können Sie Ihr Konto pausieren. Sie können dies in den Einstellungen wieder deaktivieren.</string>
+    <string name="resume_account_msg">Nehmen Sie Ihr Konto wieder auf, um neue Leute kennenzulernen. Personen, die Sie bereits gemocht haben, können Ihr Profil weiterhin sehen &amp; sich mit Ihnen verbinden.</string>
+    <string name="delete_my_account">Mein Konto löschen</string>
+    <string name="resume_my_account">Mein Konto wieder aufnehmen</string>
+    <string name="do_you_want_to_continue">Möchten Sie fortfahren?</string>
+    <string name="if_you_delete">Wenn Sie Ihr Konto löschen:</string>
+    <string name="delete_this_account">Dieses Konto löschen?</string>
+    <string name="your_account_and_data_will_be_deleted">Ihr Konto und Ihre Daten werden dauerhaft gelöscht.</string>
+    <string name="tell_us_why_are_you_leaving">Teilen Sie uns mit, warum Sie gehen?</string>
+    <string name="help_and_support">Hilfe &amp; Support</string>
+    <string name="how_can_we_help_you">Wie können wir Ihnen helfen?</string>
+    <string name="a_guide_to_lovorise">Ein Leitfaden zu Lovorise</string>
+    <string name="troubleshooting">Fehlerbehebung</string>
+    <string name="support">Support</string>
+    <string name="current_location">Aktueller Standort</string>
+    <string name="days">Tage</string>
+    <string name="between">Zwischen</string>
+    <string name="show_verified_profile_only">Nur verifizierte Profile anzeigen</string>
+    <string name="select_religion">Religion auswählen</string>
+    <string name="select_family_plan">Familienplan auswählen</string>
+    <string name="select_edu_level">Bildungsniveau auswählen</string>
+    <string name="choose_languages">Sprachen auswählen</string>
+    <string name="add_this_filter">Diesen Filter hinzufügen</string>
+    <string name="advanced_filter">Erweiterter Filter</string>
+    <string name="verification">Verifizierung</string>
+    <string name="report_has_been_sent">Bericht wurde gesendet.</string>
+    <string name="still_figuring">Noch herausfinden</string>
+    <string name="new_friends">Neue Freunde</string>
+    <string name="casual_relationship">Unverbindliche Beziehung</string>
+    <string name="long_term_relationship">Langfristige Beziehung</string>
+    <string name="life_partner">Lebenspartner</string>
+    <string name="account">Konto</string>
+    <string name="about_us">Über uns</string>
+    <string name="community_guidelines">Community-Richtlinien</string>
+    <string name="privacy_and_community">Datenschutz &amp; Community</string>
+    <string name="contact_us">Kontaktieren Sie uns</string>
+    <string name="contact_for_inquiries">Kontakt für Anfragen</string>
+    <string name="appearance">Aussehen</string>
+    <string name="system_default">Systemstandard</string>
+    <string name="dark">Dunkel</string>
+    <string name="light">Hell</string>
+    <string name="read_receipts">Lesebestätigungen</string>
+    <string name="send_read_receipts">Lesebestätigungen senden</string>
+    <string name="turning_off_will_prevent_any_matches_from_activating">Das Deaktivieren verhindert, dass Matches Lesebestätigungen in Ihrem Gespräch aktivieren</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="push_notifications">Push-Benachrichtigungen</string>
+    <string name="discover">Entdecken</string>
+    <string name="please_select_reasons_behind_report">Bitte wählen Sie die Gründe für den Bericht aus</string>
+
+    <string-array name="report_profile_reasons">
+        <item>Ich bin nicht an dieser Person interessiert</item>
+        <item>Profil ist gefälscht</item>
+        <item>Unangemessener Inhalt</item>
+        <item>Falsche Informationen</item>
+        <item>Betrug oder Täuschung</item>
+        <item>Jemand in Gefahr</item>
+        <item>Mobbing oder Belästigung</item>
+        <item>Minderjährig</item>
+        <item>Verkauf illegaler oder regulierter Waren</item>
+        <item>Verletzung des geistigen Eigentums</item>
+    </string-array>
+    <string name="team_lovorise">Team Lovorise</string>
+    <string name="anonymous_mode">Anonymer Modus</string>
+    <string name="when_turned_off_your_profile_will_be_hidden">Wenn deaktiviert, wird Ihr Profil im Kartendeck verborgen. Sie sind nur für Personen sichtbar, die Sie mögen</string>
+    <string name="control_your_profile">Steuern Sie Ihr Profil</string>
+    <string name="hide_my_age">Mein Alter verbergen</string>
+    <string name="online_status">Online-Status</string>
+    <string name="hide_location">Standort verbergen</string>
+    <string name="you_will_be_discoverable">Sie werden je nach Ihren Aktionen auffindbar sein</string>
+    <string name="you_can_change_your_location">Sie können Ihren Standort ändern, um Lovorise-Mitglieder in anderen Städten zu sehen</string>
+    <string name="profile_verification">Profilverifizierung</string>
+    <string name="blocked_users">Blockierte Benutzer</string>
+    <string name="show_distance_in">Entfernungen anzeigen in</string>
+    <string name="we_will_show_you_who_match_your_vibe">Wir zeigen Ihnen Personen, die zu Ihrer Stimmung passen, aber Sie können dennoch mit Personen außerhalb Ihrer Auswahl übereinstimmen.</string>
+    <string name="add_languages">Sprachen hinzufügen</string>
+    <string name="language">Sprache</string>
+    <string name="travel">Reisen</string>
+    <string name="using_default_language_message">Die Verwendung der Standardeinstellung passt die Sprache von Lovorise automatisch an die Systemeinstellungen Ihres Geräts an.</string>
+    <string name="welcome_to">Willkommen bei</string>
+    <string name="start_exploring">Beginnen Sie mit der Erkundung</string>
+    <string name="round_trip_message">Ihr Hin- und Rückflugziel ist auf %1$s festgelegt und wird von %2$s bis %3$s aktiviert!</string>
+    <string name="select_depature_date">Abreisedatum auswählen</string>
+    <string name="select_return_date">Rückreisedatum auswählen</string>
+    <string name="your_travel_ticket_destination_set_to">Ihr Reisezielticket wurde auf</string>
+    <string name="for_the_next">für die nächsten</string>
+    <string name="please_check_your_mail_in_moment">Bitte überprüfen Sie in Kürze Ihre E-Mails</string>
+    <string name="use_travel_ticket_to_change">Verwenden Sie das Reiseticket, um Ihr Ziel für die gewünschte Dauer zu ändern</string>
+    <string name="travel_ticket">Reiseticket</string>
+    <string name="search_and_set_travel">Suchen und setzen Sie Ihr Reiseticket-Ziel auf jede beliebige Stadt</string>
+    <string name="no_result_for_travel">Keine Ergebnisse gefunden. Versuchen Sie es mit anderen Suchbegriffen.</string>
+    <string name="i_am_travelling_to">Ich reise nach</string>
+    <string name="select_destination">Ziel auswählen</string>
+    <string name="thanks_for_letting_us_know">Danke, dass Sie uns informiert haben</string>
+    <string name="upload_ss_optional">Screenshot hochladen (optional)</string>
+    <string name="screenshots_with_size_less_than">Screenshots mit einer Größe von jeweils unter 5 MB</string>
+    <string name="enter_problem_description">Problembeschreibung eingeben...</string>
+    <string name="problem_description">Problembeschreibung</string>
+    <string name="need_support">Brauchen Sie Unterstützung?</string>
+    <string name="edit_privacy_settings">Datenschutzeinstellungen bearbeiten</string>
+    <string name="security_and_privacy">Sicherheit &amp; Datenschutz</string>
+    <string name="choose_who_can_view_your_reel">Wählen Sie aus, wer Ihre Reel sehen kann</string>
+    <string name="everyone">Jeder</string>
+    <string name="your_liked_people_on_lovorise">Ihre gemochten Personen auf Lovorise</string>
+    <string name="who_i_liked">Wen ich mochte</string>
+    <string name="your_matches_on_lovorise">Ihre Übereinstimmungen auf Lovorise</string>
+    <string name="everyone_on_lovorise">Alle auf Lovorise</string>
+    <string name="exit">Beenden</string>
+    <string name="exit_signup_confirmation_message">Möchten Sie wirklich beenden? Ihr Fortschritt wird gespeichert, und Sie können später fortfahren.</string>
+    <string name="are_you_sure_you_want_to_delete_this_reel">Möchten Sie dieses Reel wirklich löschen?</string>
+    <string name="delete_post">Beitrag löschen</string>
+    <string name="my_reel">Mein Reel</string>
+    <string name="my_hearts">Meine Herzen</string>
+    <string name="subscriptions">Abonnements</string>
+    <string name="manage">Verwalten</string>
+    <string name="get_from">Ab £4,99 erhältlich</string>
+    <string name="next_payment">Nächste Zahlung am %1$s.</string>
+    <string name="lovorise_hearts">Lovorise-Herzen</string>
+    <string name="get_hearts">Herzen holen</string>
+    <string name="upgrade_plan">Plan upgraden</string>
+    <string name="view_plan">Plan anzeigen</string>
+    <string name="subscribed_to_premium_message">Sie haben Lovorise Premium abonniert. Probieren Sie Ihre neuen Vorteile aus!</string>
+    <string name="subscribed_to_platinum_message">Sie haben Lovorise Platinum abonniert. Probieren Sie Ihre neuen Vorteile aus!</string>
+    <string name="unlock_all_features_message">Schalten Sie alle unsere Funktionen frei, um die vollständige Kontrolle über Ihr Erlebnis zu haben</string>
+    <string-array name="subscriptions_feature_titles">
+        <item>Unbegrenzte Swipes</item>
+        <item>Unbegrenzte Audioanrufe</item>
+        <item>Sehen, wer Sie mag</item>
+        <item>Wer hat Ihr Profil angesehen</item>
+        <item>Erweiterte Filter</item>
+        <item>Reiseticket</item>
+        <item>Anonymer Modus</item>
+        <item>Unbegrenztes Zurücksetzen</item>
+        <item>Werbefreies Erlebnis</item>
+    </string-array>
+
+    <string-array name="subscriptions_feature_descriptions">
+        <item>Wischen Sie so viel Sie möchten, um endlose Matches zu entdecken.</item>
+        <item>Führen Sie unbegrenzte Gespräche, um tiefere Verbindungen aufzubauen.</item>
+        <item>Sehen Sie sofort die Profile der Personen, die Sie mögen.</item>
+        <item>Finden Sie heraus, wer an Ihnen interessiert ist, indem Sie Profilansichten überprüfen.</item>
+        <item>Verfeinern Sie Ihre Suche mit personalisierten Filtern.</item>
+        <item>Ändern Sie Ihren Standort, um mit Menschen weltweit in Kontakt zu treten.</item>
+        <item>Sehen Sie sich Profile an, ohne dass diese wissen, dass Sie sie besucht haben.</item>
+        <item>Aus Versehen nach links gewischt? Setzen Sie so oft zurück, wie Sie möchten.</item>
+        <item>Genießen Sie ein ungestörtes Dating-Erlebnis ohne Werbung.</item>
+    </string-array>
+
+    <string name= "get_one_month_premium">Erhalten Sie 1 Monat für £ 4.99</string>
+    <string name= "get_one_month_platinum">Erhalten Sie 1 Monat für £ 9.99</string>
+    <string name="platinum_member_plan_message">Sie sind Mitglied des Lovorise Platinum-Plans. Ihr nächstes Rechnungsdatum ist am %1$s, mit einem fälligen Gesamtbetrag von %2$s.</string>
+    <string name="premium_member_plan_message">Sie sind Mitglied des Lovorise Premium-Plans. Ihr nächstes Rechnungsdatum ist am %1$s, mit einem fälligen Gesamtbetrag von %2$s.</string>
+    <string name="you_are_officially_anonymous">Sie sind jetzt offiziell anonym</string>
+    <string name="you_are_no_longer_anonymous">Sie sind nicht mehr anonym</string>
+    <string name="got_it">Verstanden</string>
+    <string name="get_premium">Premium holen</string>
+    <string name="anonymous_mode_message">Bleiben Sie verborgen, während Sie erkunden. Sehen, ohne gesehen zu werden, bis Sie bereit sind, den ersten Schritt zu machen.</string>
+    <string name="no_longer_anonymous_mode_message">Genießen Sie weiterhin den Anonymen Modus und weitere Funktionen, um Ihre Dating-Erfahrung zu verbessern.</string>
+
+</resources>
