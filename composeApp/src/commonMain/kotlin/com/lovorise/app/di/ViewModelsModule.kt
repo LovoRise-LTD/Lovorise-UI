@@ -13,6 +13,7 @@ import com.lovorise.app.profile.presentation.edit_profile.EditProfileScreenModel
 import com.lovorise.app.profile.presentation.verification.IDProfileVerificationScreenModel
 import com.lovorise.app.reels.presentation.viewModels.CaptureRecordScreenModel
 import com.lovorise.app.reels.presentation.viewModels.ReelsScreenModel
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.PrivacyAndSecurityScreenModel
 import com.lovorise.app.settings.presentation.screens.travel_ticket.TravelTicketScreenModel
 import com.lovorise.app.swipe.presentation.SwipeScreenModel
 import com.lovorise.app.ui.ThemeViewModel
@@ -37,6 +38,7 @@ val viewModelsModule = module {
     factory { PurchaseScreenModel(get()) }
     factory { TravelTicketScreenModel(get()) }
     factory { InviteScreenModel(get()) }
+    factory { PrivacyAndSecurityScreenModel() }
     single { ConnectivityViewModel() }
     single { ThemeViewModel() }
 

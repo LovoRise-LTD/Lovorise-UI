@@ -14,12 +14,14 @@ import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
 import coil3.request.crossfade
 import coil3.util.DebugLogger
-import com.lovorise.app.accounts.presentation.restrictions.Over18OnlyScreen
-import com.lovorise.app.filters.FilterScreen
 import com.lovorise.app.libs.iap.InAppPurchasesAndSubscriptions
-import com.lovorise.app.settings.presentation.screens.ManageDeviceScreen
 import com.lovorise.app.settings.presentation.screens.SettingsScreen
-import com.lovorise.app.splash.SplashScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.AddPersonScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.PrivacyAndSecurityScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.WhoCanSeeMyLocationScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.WhoCanSeeMyStoryScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.WhoCanShareMyOnlineStatusScreen
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.WhoCanShareMyProfileScreen
 import com.lovorise.app.util.CacheUtil
 import com.lovorise.app.util.GpsProvider
 import okio.FileSystem
@@ -52,7 +54,7 @@ fun App(
 
     KoinContext {
         Box {
-            Navigator(ManageDeviceScreen()) { navigator ->
+            Navigator(SettingsScreen()) { navigator ->
 //                val from = navigator.items.getOrNull(navigator.items.lastIndex - 1)
 //                val to = navigator.lastItem
 

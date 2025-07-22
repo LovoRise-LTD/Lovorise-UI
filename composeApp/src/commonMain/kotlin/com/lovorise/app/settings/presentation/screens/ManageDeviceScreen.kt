@@ -49,18 +49,15 @@ import coinui.composeapp.generated.resources.Res
 import coinui.composeapp.generated.resources.active_sessions
 import coinui.composeapp.generated.resources.automatically_terminate_old_sessions
 import coinui.composeapp.generated.resources.cancel
-import coinui.composeapp.generated.resources.do_you_enjoy_using_lovorise
 import coinui.composeapp.generated.resources.ic_android_device
 import coinui.composeapp.generated.resources.ic_apple_device
 import coinui.composeapp.generated.resources.ic_checked_session
 import coinui.composeapp.generated.resources.ic_device_location
 import coinui.composeapp.generated.resources.ic_phone_frame
-import coinui.composeapp.generated.resources.ic_rate_app_logo
 import coinui.composeapp.generated.resources.ic_terminate_sessions
 import coinui.composeapp.generated.resources.ic_unchecked_session
 import coinui.composeapp.generated.resources.if_inactive_for
 import coinui.composeapp.generated.resources.manage_device
-import coinui.composeapp.generated.resources.no
 import coinui.composeapp.generated.resources.no_other_active_sessions
 import coinui.composeapp.generated.resources.self_destruct_options
 import coinui.composeapp.generated.resources.session_self_destruct
@@ -69,8 +66,6 @@ import coinui.composeapp.generated.resources.terminate_all_other_sessions
 import coinui.composeapp.generated.resources.terminate_session
 import coinui.composeapp.generated.resources.the_lovorise_app_is_available_for_android_and_ios
 import coinui.composeapp.generated.resources.this_device
-import coinui.composeapp.generated.resources.we_appreciate_your_feedback
-import coinui.composeapp.generated.resources.yes
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.accounts.presentation.AccountsViewModel
 import com.lovorise.app.components.ButtonWithText
@@ -80,8 +75,6 @@ import com.lovorise.app.getAppVersion
 import com.lovorise.app.getDeviceName
 import com.lovorise.app.isAndroid
 import com.lovorise.app.noRippleClickable
-import com.lovorise.app.profile.presentation.edit_profile.hideWithCompletion
-import com.lovorise.app.rate_app.presentation.RateAppBottomSheetContent
 import com.lovorise.app.settings.presentation.components.TextWithBackground
 import com.lovorise.app.ui.BASE_DARK
 import com.lovorise.app.ui.CARD_BG_DARK

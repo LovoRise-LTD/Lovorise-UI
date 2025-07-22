@@ -302,6 +302,8 @@
     <string name="report">Report</string>
     <string name="delete_conversation">Delete Conversation</string>
     <string name="get_swiping">Get swiping</string>
+    <string name="no_match_found_try_connecting_with_others">No matches found. Try connecting with others.</string>
+    <string name="no_people_to_add_right_now">No people to add right now</string>
     <string name="no_conversations_text">When you match with other people they’ll appear here. Where you can send them a message.</string>
     <string name="likes">Likes</string>
     <string name="matches">Matches</string>
@@ -640,6 +642,7 @@
     <string name="discover_amazing_reels_and_favorite">Discover amazing reels and add them to your favorites by tapping the save icon.</string>
 
     <string name="read_receipts">Read Receipts</string>
+    <string name="your_selection_applies_to_both">Your selection applies to both you and others.</string>
     <string name="send_read_receipts">Send read receipts</string>
     <string name="turning_off_will_prevent_any_matches_from_activating">Turning this off will prevent any matches from activating Read Receipts in your conversation</string>
     <string name="notifications">Notifications</string>
@@ -677,6 +680,17 @@
     <string name="add_languages">Add languages</string>
     <string name="language">Language</string>
     <string name="travel">Travel</string>
+    <string name="security">Security</string>
+    <string name="who_can_see_my_story">Who can see my story?</string>
+    <string name="who_can_share_my_profile">Who can share my profile?</string>
+    <string name="who_can_see_my_online_status">Who can see my online status?</string>
+    <string name="who_can_see_my_profile">Who can see my profile?</string>
+    <string name="who_can_see_my_location">Who can see my location?</string>
+    <string name="privacy">Privacy</string>
+    <string name="set_this_for_all_profile">Set this privacy for all profile </string>
+    <string name="add_person">Add person</string>
+    <string name="add_exceptions">Add exceptions</string>
+    <string name="never_share_with">Never share with</string>
     <string name="using_default_language_message">Using the system default will automatically adjust Lovorise’s language to match your device’s system settings.</string>
     <string name="welcome_to">Welcome to</string>
     <string name="start_exploring">Start exploring</string>
@@ -957,6 +971,8 @@
     <string name="the_lovorise_app_is_available_for_android_and_ios">The official Lovorise app is available for Android and iPhone.</string>
     <string name="no_other_active_sessions">No other active sessions</string>
     <string name="not_now">Not now</string>
+    <string name="you_can_choose_who_can_see">You can choose who can see</string>
+    <string name="you_can_restrict_who_can_see">You can restrict who can see</string>
     <string name="this_device">This device</string>
     <string name="manage_device">Manage devices</string>
     <string name="we_will_show_you_people_who_match_vibe_outside_your_range">We’ll show you people who match your vibe, but you’ll still able to match with people outside your range.</string>

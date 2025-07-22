@@ -130,6 +130,7 @@ import com.lovorise.app.settings.presentation.components.TextWithChevronRight
 import com.lovorise.app.settings.presentation.components.TextWithSwitchBox
 import com.lovorise.app.settings.presentation.components.TitleText
 import com.lovorise.app.settings.presentation.screens.help_support.HelpAndSupportScreen1
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.PrivacyAndSecurityScreen
 import com.lovorise.app.settings.presentation.screens.travel_ticket.TravelTicketScreen
 import com.lovorise.app.ui.BASE_DARK
 import com.lovorise.app.ui.CARD_BG_DARK
@@ -242,7 +243,7 @@ class SettingsScreen  : Screen{
                 navigator.push(ChooseIDVerificationOptionScreen())
             },
             navigateToManageDevice = {
-                //todo:
+                navigator.push(ManageDeviceScreen())
             },
             themeViewModel = themeViewModel,
             themeType = currentTheme,
@@ -250,7 +251,7 @@ class SettingsScreen  : Screen{
             editProfileScreenModel = editProfileScreenModel,
             editProfileScreenState = editProfileScreenState,
             navigateToPrivacyAndSecurity = {
-
+                navigator.push(PrivacyAndSecurityScreen())
             }
         )
     }
