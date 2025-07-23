@@ -693,7 +693,7 @@ fun WeeklyMonthlyPremiumCard(
 
             Text(
                 modifier = Modifier.padding(start = 10.dp),
-                text = if (type == SubscriptionType.WEEKLY) "£ 2.99/${if(useNewLine) "\n" else ""}${stringResource(Res.string.week)}" else "£ 5.99/${if(useNewLine) "\n" else ""}${stringResource(Res.string.month_cap)}",
+                text = if (type == SubscriptionType.WEEKLY) "$ 1.99/${if(useNewLine) "\n" else ""}${stringResource(Res.string.week)}" else "$ 3.99/${if(useNewLine) "\n" else ""}${stringResource(Res.string.month_cap)}",
                 color = Color(0xffFFFFFF),
                 fontWeight = FontWeight.Medium,
                 fontSize = 18.sp,

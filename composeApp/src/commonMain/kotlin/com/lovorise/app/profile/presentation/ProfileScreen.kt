@@ -82,6 +82,7 @@ import coinui.composeapp.generated.resources.upload_photos
 import coinui.composeapp.generated.resources.verify
 import coinui.composeapp.generated.resources.verify_identity
 import coinui.composeapp.generated.resources.write_a_bio
+import com.lovorise.app.InAppPurchase
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.accounts.presentation.AccountsApiCallState
 import com.lovorise.app.accounts.presentation.AccountsViewModel
@@ -90,7 +91,14 @@ import com.lovorise.app.components.ShimmerAnimation
 import com.lovorise.app.components.Toast
 import com.lovorise.app.home.TabsScreenModel
 import com.lovorise.app.invite.InviteFriendsScreen
+import com.lovorise.app.isAndroid
+import com.lovorise.app.libs.iap.AppleReceiptData
+import com.lovorise.app.libs.iap.GoogleReceiptData
+import com.lovorise.app.libs.iap.PurchaseProductItem
+import com.lovorise.app.libs.openUrlInCustomTab
 import com.lovorise.app.lovorise_hearts.presentation.screens.LovoriseHeartBalanceScreen
+import com.lovorise.app.lovorise_hearts.presentation.screens.MyHeartsSheetContent
+import com.lovorise.app.lovorise_hearts.presentation.screens.TransactionHistoryScreen
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.onboarding_info.OnboardingInfoScreen
 import com.lovorise.app.profile.domain.models.GetCoinTask
@@ -112,7 +120,9 @@ import com.lovorise.app.profile.presentation.components.SpotlightsSheetContent
 import com.lovorise.app.profile.presentation.components.TextWithIndicator
 import com.lovorise.app.profile.presentation.components.VerificationSuccessDialog
 import com.lovorise.app.profile.presentation.components.VerificationUnderReviewDialog
+import com.lovorise.app.profile.presentation.components.WeekPlanExtendOrChangeBottomSheetContent
 import com.lovorise.app.profile.presentation.edit_profile.EditProfileScreen
+import com.lovorise.app.profile.presentation.edit_profile.hideWithCompletion
 import com.lovorise.app.profile.presentation.verification.ChooseIDVerificationOptionScreen
 import com.lovorise.app.profile.presentation.verification.ImageVerificationScreen
 import com.lovorise.app.profile_visitors.ProfileVisitorsScreen
@@ -120,6 +130,7 @@ import com.lovorise.app.reels.presentation.reels_create_upload_view.screens.Capt
 import com.lovorise.app.settings.presentation.screens.SettingsScreen
 import com.lovorise.app.ui.BASE_DARK
 import com.lovorise.app.ui.ThemeViewModel
+import com.lovorise.app.util.AppConstants
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
@@ -186,7 +197,11 @@ class ProfileScreen(
                 navigator.push(EditProfileScreen)
             },
             navigateToProfileVisitorsScreen = {
-                navigator.push(ProfileVisitorsScreen())
+                if (profileScreenState.subscriptionType != SubscriptionType.FREE) {
+                    navigator.push(ProfileVisitorsScreen())
+                }else{
+                    navigator.push(PurchaseSubscriptionScreen(SubscriptionType.WEEKLY))
+                }
             },
             navigateToProfileDescriptionScreen = {
                 println("on click invoked!!")
@@ -218,6 +233,10 @@ class ProfileScreen(
             },
             navigateToLovoriseHearts = {
                 navigator.push(LovoriseHeartBalanceScreen())
+            },
+            accountsScreenModel = accountsViewModel,
+            navigateToHistory = {
+                navigator.push(TransactionHistoryScreen())
             }
         )
     }
@@ -234,6 +253,7 @@ class ProfileScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreenContent(
+    accountsScreenModel: AccountsViewModel,
     navigateToOnboarding: () -> Unit,
     navigateToInviteFriendsScreen: () -> Unit,
     navigateToCoinBalanceScreen: () -> Unit,
@@ -253,7 +273,8 @@ fun ProfileScreenContent(
     navigateToCreateReel:()->Unit,
     navigateToImageVerification:()->Unit,
     navigateToIDVerification:()->Unit,
-    navigateToLovoriseHearts:()->Unit
+    navigateToLovoriseHearts:()->Unit,
+    navigateToHistory:()->Unit
 ) {
 
     val coroutineScope = rememberCoroutineScope()
@@ -261,6 +282,8 @@ fun ProfileScreenContent(
     val scrollState = rememberScrollState()
     val sheetState =  rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val purchasedSpotlightSheetState =  rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val weeklyAboutToExpireSheetState =  rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val myHeartsSheetState =  rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     var screenWidth by remember { mutableStateOf(0.dp) }
 
@@ -457,7 +480,9 @@ fun ProfileScreenContent(
                     isDarkMode = isDarkMode,
                     navigateToOnboarding = navigateToOnboarding,
                     navigateToInviteFriendsScreen = navigateToInviteFriendsScreen,
-                    navigateToCoinBalanceScreen = navigateToCoinBalanceScreen,
+                    navigateToCoinBalanceScreen = {
+                        profileScreenModel.updateMyHeartsSheetState(true)
+                    },
                     navigateToReelsScreen = navigateToReelsScreen,
                     navigateToEditProfileScreen = navigateToEditProfileScreen,
                     navigateToCreateReel = navigateToCreateReel,
@@ -525,6 +550,70 @@ fun ProfileScreenContent(
             },
             isDarkMode = isDarkMode
         )
+    }
+    if (profileScreensState.showMyHeartsSheet){
+        ModalBottomSheet(
+            containerColor = if (isDarkMode) BASE_DARK else Color.White,
+            contentWindowInsets = { WindowInsets(0.dp, 0.dp, 0.dp, 0.dp) },
+            //  modifier = Modifier.navigationBarsPadding(),
+            sheetState = myHeartsSheetState,
+            onDismissRequest = {
+                profileScreenModel.updateMyHeartsSheetState(false)
+            },
+
+            shape = RoundedCornerShape(topStartPercent = 4, topEndPercent = 4),
+            dragHandle = null,
+        ) {
+            MyHeartsSheetContent(
+                isDarkMode = isDarkMode,
+                profileScreenState = profileScreensState,
+                onPurchase = { productId, hearts ->
+                    InAppPurchase.DEFAULT?.startTransaction(PurchaseProductItem(productId = productId, type = PurchaseProductItem.ProductType.IN_APP)){ receiptData->
+                        profileScreenModel.verifyPurchase(
+                            verifier = {
+                                if(isAndroid()){
+                                    accountsScreenModel.verifyGooglePurchase(receiptData as GoogleReceiptData, context = context)
+                                }else{
+                                    accountsScreenModel.verifyApplePurchase(receiptData as AppleReceiptData, context = context)
+                                }
+                            },
+                            hearts = hearts
+                        )
+                    }
+                },
+                onNavigateToHistory = navigateToHistory,
+                onTermsAndCondition = {
+                    myHeartsSheetState.hideWithCompletion(coroutineScope) {
+                        profileScreenModel.updateMyHeartsSheetState(false)
+                        openUrlInCustomTab(AppConstants.TERMS_AND_CONDITIONS_URL, context)
+                    }
+                }
+            )
+        }
+    }
+
+    if (profileScreensState.showWeeklyAboutToExpireSheet){
+        ModalBottomSheet(
+            containerColor = if (isDarkMode) BASE_DARK else Color.White,
+            contentWindowInsets = { WindowInsets(0.dp, 0.dp, 0.dp, 0.dp) },
+            //  modifier = Modifier.navigationBarsPadding(),
+            sheetState = weeklyAboutToExpireSheetState,
+            onDismissRequest = {
+                profileScreenModel.updateWeeklyAboutToExpireState(false)
+            },
+
+            shape = RoundedCornerShape(topStartPercent = 4, topEndPercent = 4),
+            dragHandle = null,
+        ) {
+            WeekPlanExtendOrChangeBottomSheetContent(
+                isDarkMode = isDarkMode,
+                onNotNow = {
+                    profileScreenModel.updateWeeklyAboutToExpireState(false)
+                },
+                onExtendOneMoreWeek = {},
+                onSwitchToMonthlyPlan = {}
+            )
+        }
     }
 
     if (profileScreensState.showSubscriptionDetailsDialog) {

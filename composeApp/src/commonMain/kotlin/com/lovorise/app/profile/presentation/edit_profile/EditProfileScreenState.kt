@@ -104,8 +104,8 @@ data class EditProfileScreenState(
     )
 
     data class ShowMe(
-        val categories: List<String> = listOf("All","Men","Women","Non-binary"),
-        val selectedItems : List<String> = listOf("All"),
+        val categories: List<String> = listOf("All","Man","Woman","Non-binary"),
+        val selectedItems : List<String> = listOf("Man","Woman","Non-binary"),
         val isVisible: Boolean = true
     )
 

@@ -15,6 +15,8 @@ data class ProfileScreensState(
     val showSubscriptionDetailsDialog:Boolean = false,
     val showCancelConfirmationDialog:Boolean = false,
     val showSpotlightOptions: Boolean = false,
+    val showWeeklyAboutToExpireSheet: Boolean = false,
+    val showMyHeartsSheet: Boolean = false,
     val showGetVerifyBadgeDialog:Boolean = false,
     val showVerificationSuccessDialog:Boolean = false,
     val isVerificationUnderReview:Boolean = false,

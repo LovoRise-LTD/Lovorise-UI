@@ -18,6 +18,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.width
@@ -31,6 +33,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetState
@@ -71,6 +74,7 @@ import coinui.composeapp.generated.resources.camera
 import coinui.composeapp.generated.resources.camera_permissions_required
 import coinui.composeapp.generated.resources.children_preferences
 import coinui.composeapp.generated.resources.choose_option_that_feels_right
+import coinui.composeapp.generated.resources.control_profile_privacy
 import coinui.composeapp.generated.resources.dating_preference
 import coinui.composeapp.generated.resources.distance_preference
 import coinui.composeapp.generated.resources.drink_preferences
@@ -81,7 +85,6 @@ import coinui.composeapp.generated.resources.education_levels
 import coinui.composeapp.generated.resources.family_plans
 import coinui.composeapp.generated.resources.gender
 import coinui.composeapp.generated.resources.height
-import coinui.composeapp.generated.resources.hide_my_photos_and_videos
 import coinui.composeapp.generated.resources.hold_drag_to_reorder
 import coinui.composeapp.generated.resources.ic_arrow_up
 import coinui.composeapp.generated.resources.ic_chevron_right_light_color
@@ -91,6 +94,7 @@ import coinui.composeapp.generated.resources.languages
 import coinui.composeapp.generated.resources.location
 import coinui.composeapp.generated.resources.months
 import coinui.composeapp.generated.resources.name
+import coinui.composeapp.generated.resources.open_to_everyone
 import coinui.composeapp.generated.resources.permissions_in_your_settings
 import coinui.composeapp.generated.resources.pets
 import coinui.composeapp.generated.resources.photo
@@ -101,6 +105,7 @@ import coinui.composeapp.generated.resources.religions
 import coinui.composeapp.generated.resources.show_me
 import coinui.composeapp.generated.resources.smoking
 import coinui.composeapp.generated.resources.smoking_preferences
+import coinui.composeapp.generated.resources.who_do_you_want_to_meet
 import coinui.composeapp.generated.resources.your_profession
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.accounts.presentation.AccountsApiCallState
@@ -117,6 +122,8 @@ import com.lovorise.app.accounts.presentation.signup.profile_upload.components.I
 import com.lovorise.app.accounts.presentation.signup.profile_upload.components.ProgressIndicator
 import com.lovorise.app.accounts.presentation.signup.profile_upload.components.ReorderableLazyGrid
 import com.lovorise.app.components.ConnectivityToast
+import com.lovorise.app.components.CustomDivider
+import com.lovorise.app.components.TextWithCheckbox
 import com.lovorise.app.components.Toast
 import com.lovorise.app.libs.permissions.PermissionState
 import com.lovorise.app.libs.permissions_compose.BindEffect
@@ -145,6 +152,8 @@ import com.lovorise.app.profile.presentation.edit_profile.components.sheets_comp
 import com.lovorise.app.profile.presentation.edit_profile.components.sheets_components.UpdateReligionSheetContent
 import com.lovorise.app.profile.presentation.edit_profile.components.sheets_components.UpdateShowMeBottomSheetContent
 import com.lovorise.app.profile.presentation.edit_profile.components.sheets_components.UpdateSmokingSheetContent
+import com.lovorise.app.settings.presentation.components.CustomSwitch
+import com.lovorise.app.settings.presentation.screens.privacy_and_security.screens.WhoCanSeeMyProfileScreen
 import com.lovorise.app.ui.BASE_DARK
 import com.lovorise.app.ui.CARD_BG_DARK
 import com.lovorise.app.ui.DISABLED_LIGHT
@@ -260,8 +269,8 @@ object EditProfileScreen: Screen {
             navigateToEditPickedMediaScreen = {
                 navigator.push(EditPickedMediaScreen())
             },
-            navigateToManageImageVideoScreen = {
-                navigator.push(ProfileImageVideoManagementScreen())
+            navigateToControlProfilePrivacy = {
+                navigator.push(WhoCanSeeMyProfileScreen())
             }
         )
     }
@@ -276,7 +285,7 @@ fun EditProfileScreenContent(
     languageScreenModel: LanguageScreenModel,
     profileUploadScreenModel:ProfileUploadScreenViewModel,
     navigateToGalleryScreen:()->Unit,
-    navigateToManageImageVideoScreen:()->Unit,
+    navigateToControlProfilePrivacy:()->Unit,
     profileScreenState: EditProfileScreenState,
     screenModel: EditProfileScreenModel,
     accountsState:AccountsApiCallState,
@@ -523,13 +532,13 @@ fun EditProfileScreenContent(
                             .padding(horizontal = 16.dp)
                             .fillMaxWidth()
                             .height(24.dp)
-                            .noRippleClickable(navigateToManageImageVideoScreen),
+                            .noRippleClickable(navigateToControlProfilePrivacy),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
 
                         Text(
-                            text = stringResource(Res.string.hide_my_photos_and_videos),
+                            text = stringResource(Res.string.control_profile_privacy),
                             fontWeight = FontWeight.Medium,
                             fontSize = 14.sp,
                             lineHeight = 20.sp,
@@ -600,6 +609,15 @@ fun EditProfileScreenContent(
                         description = state.gender.categories.getOrElse(state.gender.selectedIndex) { "Pick the gender that best describe you" },
                         onClick = {screenModel.openSheet(ProfileBottomSheetType.UpdateGender)},
                         isDarkMode = isDarkMode
+                    )
+
+                    WhoDoYouWantToMeetSection(
+                        modifier = Modifier,
+                        isDarkMode = isDarkMode,
+                        showMe = state.showMe,
+                        updateShowMe = {
+                            screenModel.updateShowMe(it)
+                        }
                     )
 
                     EditProfileItem(
@@ -1148,6 +1166,93 @@ fun EditProfileScreenContent(
 
 
         }
+    }
+}
+
+@Composable
+fun WhoDoYouWantToMeetSection(modifier: Modifier, isDarkMode: Boolean, showMe: EditProfileScreenState.ShowMe, updateShowMe:(EditProfileScreenState.ShowMe)-> Unit){
+    val showMeItems = listOf("Man","Woman","Non-binary")
+
+    Column(modifier = modifier.fillMaxWidth().padding(horizontal = 16.dp)) {
+        HorizontalDivider(
+            modifier = Modifier
+                .fillMaxWidth(),
+            thickness = 1.dp,
+            color = if (isDarkMode) Color(0xff737272) else Color(0xffEAECF0)
+        )
+
+        Row(modifier = Modifier.fillMaxWidth().height(52.dp), verticalAlignment = Alignment.CenterVertically){
+            Text(
+                modifier = Modifier,
+                text = stringResource(Res.string.who_do_you_want_to_meet),
+                color = if (isDarkMode) Color.White else Color(0xff101828),
+                fontSize = 14.sp,
+                lineHeight = 20.sp,
+                fontFamily = PoppinsFontFamily(),
+                fontWeight = FontWeight.Medium
+            )
+
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+//                .padding(horizontal = 16.dp)
+                .requiredHeight(36.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+
+
+            Text(
+                color = if (isDarkMode) DISABLED_LIGHT else Color(0xff344054),
+                text = stringResource(Res.string.open_to_everyone),
+                fontWeight = FontWeight.Normal,
+                fontSize = 14.sp,
+                lineHeight = 24.sp,
+                fontFamily = PoppinsFontFamily()
+            )
+
+            Box(Modifier.requiredHeight(20.dp).requiredWidth(36.dp)) {
+                CustomSwitch(
+                    modifier = Modifier.fillMaxSize(),
+                    isChecked = showMe.selectedItems.size == 3,
+                    onCheckChanged = {
+                        updateShowMe(showMe.copy(
+                            selectedItems = showMeItems
+                        ))
+                    },
+                    isDarkMode = isDarkMode
+                )
+            }
+
+        }
+        Spacer(Modifier.height(16.dp))
+        showMeItems.forEachIndexed { index, value ->
+            TextWithCheckbox(
+                modifier = Modifier.align(Alignment.Start).padding(horizontal = 8.dp),
+                text = value,
+                isChecked = showMe.selectedItems.any { it == value },
+                hideCheckBox = false,
+                onClick = {
+                    updateShowMe(showMe.copy(
+                        selectedItems = showMe.selectedItems.toMutableList().apply {
+                            if (showMe.selectedItems.contains(value)){
+                                remove(value)
+                            }else{
+                                add(value)
+                            }
+                        }
+                    ))
+                },
+                isDarkMode = isDarkMode
+            )
+            Spacer(Modifier.height(8.dp))
+            if (index != showMeItems.lastIndex) {
+                CustomDivider(modifier = Modifier.padding(8.dp), isDarkMode = isDarkMode)
+            }
+        }
+        Spacer(Modifier.height(16.dp))
     }
 }
 

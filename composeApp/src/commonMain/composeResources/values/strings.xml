@@ -125,6 +125,9 @@
     <string name="tell_something_missing">Tell us if we’re missing something.</string>
     <string name="describe_here">Describe here ...</string>
     <string name="gender">Gender</string>
+    <string name="enjoy_uninterrupted_access_with_a_better_value">Enjoy uninterrupted access with a better value plan.</string>
+    <string name="stay_premium_for_seven_more_days_one_time">Stay premium for 7 more days – one-time payment.</string>
+    <string name="your_current_plan_ends_tomorrow_dont_lose_premium_features">Your current weekly plan ends tomorrow.\nDon't lose access to premium features!</string>
     <string name="write_something_fun">Write something fun...</string>
     <string name="enable_location">Enable location</string>
     <string name="open_settings">Open Settings</string>
@@ -133,6 +136,7 @@
     <string name="set_your_location_to_see_who_is_nearby">Set your location to see who is nearby or beyond.You will be unable to match with anyone else.</string>
     <string name="i_agree">I agree</string>
     <string name="who_would_you_like_to_meet">Who would you like to meet?</string>
+    <string name="who_do_you_want_to_meet">Who do you want to meet?</string>
     <string name="how_tall_are_you">How tall are you?</string>
     <string name="you_will_only_be_shown_to_people_looking_to_date_your_gender">You’ll only be shown to people looking to date your gender.</string>
     <string name="what_languages_do_you_know">What languages do you know?</string>
@@ -214,6 +218,9 @@
     <string name="add_more_about_your_gender">Add more about your gender</string>
     <string name="pick_gender_that_describe_you">Pick the gender that best describe you.</string>
     <string name="save_and_close">Save and close</string>
+    <string name="switch_to_lovorise_monthly_plan">Switch to Lovorise monthly plan</string>
+    <string name="extend_for_one_more_week">Extend for 1 more week</string>
+    <string name="your_week_plan_is_about_to_expire">Your week plan is about to expire!</string>
     <string-array name="drink_preferences">
         <item>Not for me</item>
         <item>Sober curious</item>
@@ -369,7 +376,7 @@
     <string name="enjoy_ultimate_perks">Enjoy ultimate perks and unmatched visibility to stand out.</string>
     <string name="unlock_essential_features">Unlock essential features for an enhanced dating experience.</string>
     <string name="lovorise_premium">Lovorise Premium</string>
-    <string name="your_lovorise_premium_weekly">Your Lovorise Premium Weekly</string>
+    <string name="your_lovorise_premium_weekly">Your Lovorise Premium Week</string>
     <string name="your_lovorise_premium_monthly">Your Lovorise Premium Monthly</string>
     <string name="cancel_subscription_message">Are you sure you want to cancel your Premium subscription?\nIf you cancel, you will not be charged on your renewal date. You will still have access to Premium features until %1$s.</string>
     <string name="get_coins">Get Coins</string>
@@ -489,12 +496,13 @@
     <string name="next_payment">Next payment on %1$s.</string>
     <string name="subscribed_to_premium_weekly_message">You have subscribed to Lovorise Premium Week, try out your new benefits!</string>
     <string name="subscribed_to_premium_monthly_message">You have subscribed to Lovorise Premium Monthly, try out your new benefits!</string>
-    <string name="get_from">Get from £2.99</string>
+    <string name="get_from">Get from $ 1.99</string>
     <string name= "get_one_month_premium">Get 1 month for £ 5.99</string>
     <string name= "get_one_week_premium">Get 1 week for £ 2.99</string>
     <string name="monthly_member_plan_message">You're a member of a Lovorise Premium Monthly plan. Your next billing date is on %1$s, with a total amount due of %2$s.</string>
     <string name="weekly_member_plan_message">You're a member of a Lovorise Premium Week plan.</string>
     <string name="lovorise_hearts">Lovorise Hearts</string>
+    <string name="hearts_let_you_unlock_special_perks_and_premium_features">Hearts let you unlock special perks and premium features to boost your Lovorise experience. </string>
     <string name="get_hearts">Get Hearts</string>
     <string name="unlock_all_features_message">Unlock all of our features to be in complete control of your experience</string>
     <string name="share_reels">Share Reels</string>
@@ -635,6 +643,7 @@
     <string name="no_favorites_yet">No favorites yet!</string>
     <string name="explore">Explore</string>
     <string name="hearts">Hearts</string>
+    <string name="hearts_let_you_unlock_special_perks_and_premium">Hearts let you unlock special perks and premium features to boost your Lovorise experience. </string>
     <string name="buy_hearts">Buy Hearts</string>
     <string name="your_block_list_empty">Your blocked list is empty</string>
     <string name="block_user_message"> If someone’s behavior isn’t right, you can block them to maintain a safe and comfortable experience.</string>
@@ -666,6 +675,7 @@
     <string name="anonymous_mode">Anonymous Mode</string>
     <string name="when_turned_off_your_profile_will_be_hidden">When turned off, your profile will be hidden from the card stack. You will be discoverable only by people you like</string>
     <string name="control_your_profile">Control your profile</string>
+    <string name="control_profile_privacy">Control profile privacy</string>
     <string name="hide_my_age">Hide my age</string>
     <string name="online_status">Online status</string>
     <string name="hide_location">Hide Location</string>

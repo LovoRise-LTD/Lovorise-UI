@@ -1,9 +1,7 @@
 package com.lovorise.app.lovorise_hearts.presentation.components
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,7 +23,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coinui.composeapp.generated.resources.Res
-import coinui.composeapp.generated.resources.*
+import coinui.composeapp.generated.resources.hearts
+import coinui.composeapp.generated.resources.ic_heart_small
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.ui.CARD_BG_DARK
@@ -39,8 +38,8 @@ fun BuyLovoriseHeartsItems(item: BuyLovoriseHeartsItem, onClick : () ->Unit,isDa
         modifier = Modifier
             .fillMaxWidth()
             .height(63.dp)
-            .background(if (isDarkMode) CARD_BG_DARK else Color.White, RoundedCornerShape(16.dp))
-            .border(BorderStroke(1.dp, if (isDarkMode) CARD_BG_DARK else Color(0xffD0D5DD).copy(alpha = 0.3f)), RoundedCornerShape(16.dp))
+            .background(if (isDarkMode) CARD_BG_DARK else Color(0xffF4F6FA), RoundedCornerShape(16.dp))
+            //.border(BorderStroke(1.dp, if (isDarkMode) CARD_BG_DARK else Color(0xffD0D5DD).copy(alpha = 0.3f)), RoundedCornerShape(16.dp))
     ){
 
         Row(
@@ -49,7 +48,8 @@ fun BuyLovoriseHeartsItems(item: BuyLovoriseHeartsItem, onClick : () ->Unit,isDa
                // .padding(vertical = 16.dp)
                 .padding(start = 16.dp, end = 18.dp),
             verticalAlignment = Alignment.CenterVertically
-        ) {
+        )
+        {
 
             Box(Modifier.size(24.dp), contentAlignment = Alignment.Center) {
                 Image(
@@ -87,7 +87,7 @@ fun BuyLovoriseHeartsItems(item: BuyLovoriseHeartsItem, onClick : () ->Unit,isDa
             Box(
                 modifier = Modifier
                     .height(31.dp)
-                    .width(96.dp)
+                    .width(73.dp)
                     .background(
                         brush = Brush.linearGradient(
                             listOf(Color(0xffF3335D), Color(0xffF33386))

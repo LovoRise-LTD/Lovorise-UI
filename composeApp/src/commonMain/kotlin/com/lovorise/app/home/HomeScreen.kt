@@ -18,7 +18,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
@@ -31,12 +30,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cafe.adriel.voyager.core.annotation.InternalVoyagerApi
-import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.koinNavigatorScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -50,8 +45,6 @@ import com.lovorise.app.accounts.presentation.AccountsApiCallState
 import com.lovorise.app.accounts.presentation.AccountsViewModel
 import com.lovorise.app.accounts.presentation.onboarding.OnboardingScreen
 import com.lovorise.app.accounts.presentation.signup.location.EnableGpsDialog
-import com.lovorise.app.accounts.presentation.signup.location.LocationPermissionDialog
-import com.lovorise.app.accounts.presentation.signup.location.LocationScreenModel
 import com.lovorise.app.bottom_bar.BottomNavBar
 import com.lovorise.app.chat.presentation.ChatScreen
 import com.lovorise.app.chat.presentation.ChatScreenModel
@@ -60,10 +53,6 @@ import com.lovorise.app.components.ConnectivityToast
 import com.lovorise.app.components.RewardsOverlay
 import com.lovorise.app.libs.location.LocationData
 import com.lovorise.app.libs.location.LocationManager
-import com.lovorise.app.libs.permissions.PermissionState
-import com.lovorise.app.libs.permissions_compose.BindEffect
-import com.lovorise.app.libs.permissions_compose.rememberPermissionsControllerFactory
-import com.lovorise.app.libs.shared_prefs.PreferencesKeys
 import com.lovorise.app.libs.shared_prefs.SharedPrefs
 import com.lovorise.app.libs.shared_prefs.SharedPrefsImpl
 import com.lovorise.app.profile.presentation.ProfileScreen
@@ -104,17 +93,17 @@ class HomeScreen : Screen{
        // val tabsState by tabsScreenModel.state.collectAsState()
         val profileScreenModel = navigator.koinNavigatorScreenModel<ProfileScreenModel>()
         val accountsState by accountsViewModel.state.collectAsState()
-        val coroutineScope = rememberCoroutineScope()
+//        val coroutineScope = rememberCoroutineScope()
+//
+//
+//        val factory = rememberPermissionsControllerFactory()
 
 
-        val factory = rememberPermissionsControllerFactory()
+       // val locationScreenModel = rememberScreenModel { LocationScreenModel(factory.createPermissionsController()) }
 
+     //   BindEffect(locationScreenModel.controller)
 
-        val locationScreenModel = rememberScreenModel { LocationScreenModel(factory.createPermissionsController()) }
-
-        BindEffect(locationScreenModel.controller)
-
-        val lifecycleOwner = LocalLifecycleOwner.current
+       // val lifecycleOwner = LocalLifecycleOwner.current
 
         LaunchedEffect(true){
             profileScreenModel.getPurchaseInfo(ctx)
@@ -127,29 +116,29 @@ class HomeScreen : Screen{
 
 
 
-        DisposableEffect(lifecycleOwner) {
-            val observer = LifecycleEventObserver { _, event ->
-                when (event) {
-                    Lifecycle.Event.ON_RESUME -> {
-                        coroutineScope.launch {
-                            locationScreenModel.provideOrRequestPermission()
-                            GpsProviderInstance.DEFAULT?.startGpsListener()
-//                            if (locationScreenModel.permissionState.value == PermissionState.NotGranted || locationScreenModel.permissionState.value == PermissionState.NotGranted){
-//                                locationScreenModel.provideOrRequestPermission()
-//                            }
-                        }
-                    }
-                    else ->{}
-                }
-            }
-
-            lifecycleOwner.lifecycle.addObserver(observer)
-
-            onDispose {
-                GpsProviderInstance.DEFAULT?.stopGpsListener()
-                lifecycleOwner.lifecycle.removeObserver(observer)
-            }
-        }
+//        DisposableEffect(lifecycleOwner) {
+//            val observer = LifecycleEventObserver { _, event ->
+//                when (event) {
+//                    Lifecycle.Event.ON_RESUME -> {
+//                        coroutineScope.launch {
+////                            locationScreenModel.provideOrRequestPermission()
+////                            GpsProviderInstance.DEFAULT?.startGpsListener()
+////                            if (locationScreenModel.permissionState.value == PermissionState.NotGranted || locationScreenModel.permissionState.value == PermissionState.NotGranted){
+////                                locationScreenModel.provideOrRequestPermission()
+////                            }
+//                        }
+//                    }
+//                    else ->{}
+//                }
+//            }
+//
+//            lifecycleOwner.lifecycle.addObserver(observer)
+//
+//            onDispose {
+//                GpsProviderInstance.DEFAULT?.stopGpsListener()
+//                lifecycleOwner.lifecycle.removeObserver(observer)
+//            }
+//        }
 
 
         LaunchedEffect(true){
@@ -192,7 +181,7 @@ class HomeScreen : Screen{
             reelsScreenModel = reelsScreenModel,
             profileScreenModel = profileScreenModel,
             accountsState = accountsState,
-            locationScreenModel = locationScreenModel,
+         //   locationScreenModel = locationScreenModel,
             chatScreenModel = chatScreenModel
         )
     }
@@ -201,7 +190,7 @@ class HomeScreen : Screen{
 
 @OptIn(ExperimentalMaterial3Api::class, InternalVoyagerApi::class)
 @Composable
-fun HomeScreenContent(isDarkMode:Boolean, onBack:()->Unit, screenModel: TabsScreenModel, navigateToRateScreen:()->Unit, prefs: SharedPrefs?, accountsViewModel: AccountsViewModel, reelsScreenModel: ReelsScreenModel,profileScreenModel: ProfileScreenModel,accountsState:AccountsApiCallState,locationScreenModel: LocationScreenModel,chatScreenModel: ChatScreenModel) {
+fun HomeScreenContent(isDarkMode:Boolean, onBack:()->Unit, screenModel: TabsScreenModel, navigateToRateScreen:()->Unit, prefs: SharedPrefs?, accountsViewModel: AccountsViewModel, reelsScreenModel: ReelsScreenModel,profileScreenModel: ProfileScreenModel,accountsState:AccountsApiCallState,chatScreenModel: ChatScreenModel) {
 
 
 
@@ -218,23 +207,23 @@ fun HomeScreenContent(isDarkMode:Boolean, onBack:()->Unit, screenModel: TabsScre
     val reelsScreenState by reelsScreenModel.reelsScreenState.collectAsState()
     val reelsState by reelsScreenModel.state.collectAsState()
 
-    val locationPermissionState by locationScreenModel.permissionState.collectAsState()
+   // val locationPermissionState by locationScreenModel.permissionState.collectAsState()
 
-    val showLocationPermissionDialog by rememberSaveable(locationPermissionState){ mutableStateOf(locationPermissionState == PermissionState.DeniedAlways) }
+   // val showLocationPermissionDialog by rememberSaveable(locationPermissionState){ mutableStateOf(locationPermissionState == PermissionState.DeniedAlways) }
     var showEnableGpsPrompt by rememberSaveable { mutableStateOf(false) }
 
     val ctx = LocalPlatformContext.current
-    val currentGpsStateFlow = GpsProviderInstance.DEFAULT?.currentGpsState
+//    val currentGpsStateFlow = GpsProviderInstance.DEFAULT?.currentGpsState
     val profileScreenState by profileScreenModel.state.collectAsState()
     var gpsState by rememberSaveable { mutableStateOf(false) }
 
-    LaunchedEffect(currentGpsStateFlow){
-        currentGpsStateFlow?.collect{
-            gpsState = it
-            showEnableGpsPrompt = it == false
-            println("the current gps state is $it")
-        }
-    }
+//    LaunchedEffect(currentGpsStateFlow){
+//        currentGpsStateFlow?.collect{
+//            gpsState = it
+//            showEnableGpsPrompt = it == false
+//            println("the current gps state is $it")
+//        }
+//    }
 
     LaunchedEffect(state.activeTab){
         println("the current active tab: ${state.activeTab}")
@@ -248,31 +237,31 @@ fun HomeScreenContent(isDarkMode:Boolean, onBack:()->Unit, screenModel: TabsScre
 //        }
 //    }
 
-    LaunchedEffect(locationPermissionState){
-
-        screenModel.updateLocation(locationPermissionState,ctx){
-            showEnableGpsPrompt = true
-        }
-//        if (locationPermissionState == PermissionState.Granted && accountsState.currentLocation == null){
+//    LaunchedEffect(locationPermissionState){
 //
-//            val fetchLocation : suspend ()->Unit = {
-//                val locationManager = LocationManager(ctx)
-//                val currentLocation = locationManager.getCurrentLocation()
-//                println("the current location is $currentLocation")
-//                if (currentLocation != null) {
-//                    accountsViewModel.updateCurrentLocation(currentLocation)
-//                }
-//            }
-//
-//            if (GpsProviderInstance.DEFAULT?.isGpsEnabled() == true){
-//                fetchLocation()
-//            }else{
-//                showEnableGpsPrompt = true
-//            }
-//
-//
+//        screenModel.updateLocation(locationPermissionState,ctx){
+//            showEnableGpsPrompt = true
 //        }
-    }
+////        if (locationPermissionState == PermissionState.Granted && accountsState.currentLocation == null){
+////
+////            val fetchLocation : suspend ()->Unit = {
+////                val locationManager = LocationManager(ctx)
+////                val currentLocation = locationManager.getCurrentLocation()
+////                println("the current location is $currentLocation")
+////                if (currentLocation != null) {
+////                    accountsViewModel.updateCurrentLocation(currentLocation)
+////                }
+////            }
+////
+////            if (GpsProviderInstance.DEFAULT?.isGpsEnabled() == true){
+////                fetchLocation()
+////            }else{
+////                showEnableGpsPrompt = true
+////            }
+////
+////
+////        }
+//    }
 
 //    LaunchedEffect(true){
 //        delay(3000L)
@@ -371,9 +360,9 @@ fun HomeScreenContent(isDarkMode:Boolean, onBack:()->Unit, screenModel: TabsScre
             }
         }
 
-        if (showLocationPermissionDialog) {
-            LocationPermissionDialog(openSettings = locationScreenModel::openSettings)
-        }
+//        if (showLocationPermissionDialog) {
+//            LocationPermissionDialog(openSettings = locationScreenModel::openSettings)
+//        }
         if (showEnableGpsPrompt){
             EnableGpsDialog(onEnable = {
                 val fetchLocation : suspend ()->Unit = {

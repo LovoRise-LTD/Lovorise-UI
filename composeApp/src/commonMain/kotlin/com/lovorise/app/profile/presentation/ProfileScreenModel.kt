@@ -44,6 +44,21 @@ class ProfileScreenModel (private val purchaseRepo: PurchaseRepo): ScreenModel {
             )
         }
     }
+    fun updateMyHeartsSheetState(value: Boolean){
+        _state.update {
+            it.copy(
+                showMyHeartsSheet = value
+            )
+        }
+    }
+
+    fun updateWeeklyAboutToExpireState(value: Boolean){
+        _state.update {
+            it.copy(
+                showWeeklyAboutToExpireSheet = value
+            )
+        }
+    }
 
     fun updateSubscriptionData(type:SubscriptionType){
         val expires = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date

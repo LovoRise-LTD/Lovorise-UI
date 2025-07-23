@@ -12,10 +12,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun CustomDivider(
     color: Color? = null,
-    isDarkMode:Boolean = false
+    isDarkMode:Boolean = false,
+    modifier: Modifier= Modifier
 ) {
 
-    Box(Modifier
+    Box(modifier
         .fillMaxWidth()
         .height(1.dp)
         .background(color ?: (if (isDarkMode) Color(0xff737272) else Color(0xffEAECF0)))

@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
@@ -37,6 +38,7 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import coil3.compose.LocalPlatformContext
 import coinui.composeapp.generated.resources.Res
 import coinui.composeapp.generated.resources.buy_hearts
+import coinui.composeapp.generated.resources.hearts_let_you_unlock_special_perks_and_premium
 import coinui.composeapp.generated.resources.ic_heart_small
 import coinui.composeapp.generated.resources.ic_history
 import coinui.composeapp.generated.resources.ic_left
@@ -56,10 +58,10 @@ import com.lovorise.app.lovorise_hearts.presentation.components.LovoriseHeartScr
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.profile.presentation.ProfileScreenModel
 import com.lovorise.app.profile.presentation.ProfileScreensState
-import com.lovorise.app.settings.presentation.screens.openUrlExternally
 import com.lovorise.app.ui.BASE_DARK
 import com.lovorise.app.ui.CARD_BG_DARK
 import com.lovorise.app.ui.DISABLED_LIGHT
+import com.lovorise.app.ui.PRIMARY
 import com.lovorise.app.ui.ThemeViewModel
 import com.lovorise.app.util.AppConstants
 import org.jetbrains.compose.resources.stringResource
@@ -121,7 +123,8 @@ fun LovoriseHeartsBalanceScreenContent(onBack:()->Unit, isDarkMode:Boolean,onPur
 
     Column(
         modifier = Modifier.fillMaxSize().background(if (isDarkMode) BASE_DARK else Color.White)
-    ) {
+    )
+    {
 
 
         Spacer(
@@ -310,5 +313,177 @@ fun LovoriseHeartsBalanceScreenContent(onBack:()->Unit, isDarkMode:Boolean,onPur
     }
 
 
+
+}
+
+@Composable
+fun MyHeartsSheetContent(isDarkMode: Boolean,profileScreenState: ProfileScreensState,onNavigateToHistory:()-> Unit,onPurchase:(String, Long)-> Unit,onTermsAndCondition:()-> Unit){
+    Column(
+        modifier = Modifier.background(if (isDarkMode) BASE_DARK else Color.White)
+    ) {
+
+        Column(modifier = Modifier.background(if (isDarkMode) BASE_DARK else Color.White).padding(horizontal = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+
+            Box(Modifier.height(16.dp).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                Box(
+                    Modifier
+                        .height(2.dp)
+                        .width(40.dp)
+                        .background(Color(0xff667085))
+                )
+            }
+
+            Spacer(Modifier.height(16.dp))
+
+            Box(Modifier.fillMaxWidth().height(24.dp)) {
+
+                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text(
+                        text = stringResource(Res.string.lovorise_hearts),
+                        fontFamily = PoppinsFontFamily(),
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 16.sp,
+                        lineHeight = 24.sp,
+                        letterSpacing = 0.2.sp,
+                        textAlign = TextAlign.Center
+                    )
+                }
+
+                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.CenterEnd) {
+                    Icon(
+                        tint = if (isDarkMode) Color.White else Color.Black,
+                        modifier = Modifier.padding(end = 16.dp).size(24.dp)
+                            .noRippleClickable(onNavigateToHistory),
+                        imageVector = vectorResource(Res.drawable.ic_history),
+                        contentDescription = null
+                    )
+                }
+
+            }
+            Spacer(Modifier.height(8.dp))
+
+            Row(
+                modifier = Modifier
+                    .height(34.dp)
+                    .fillMaxWidth()
+                    // .padding(vertical = 16.dp)
+                    .padding(start = 16.dp, end = 18.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            )
+            {
+                Box(Modifier.size(24.dp), contentAlignment = Alignment.Center) {
+                    Image(
+                        imageVector = vectorResource(Res.drawable.ic_heart_small),
+                        contentDescription = "hearts",
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
+
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                Text(
+                    text = profileScreenState.hearts.toString(),
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                    lineHeight = 34.sp,
+                    fontFamily = PoppinsFontFamily(),
+                    color = if (isDarkMode) Color.White else Color(0xff101828)
+                )
+
+            }
+
+            Spacer(Modifier.height(16.dp))
+
+            Text(
+                text = stringResource(Res.string.hearts_let_you_unlock_special_perks_and_premium),
+                fontFamily = PoppinsFontFamily(),
+                fontWeight = FontWeight.Normal,
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                lineHeight = 16.52.sp,
+                letterSpacing = 0.14.sp,
+                color = Color(0xff344054)
+            )
+
+            Spacer(Modifier.height(16.dp))
+
+            //coin items
+            BuyLovoriseHeartsItems(
+                isDarkMode = isDarkMode,
+                item = BuyLovoriseHeartsItem("50","$ 0.99"),
+                onClick = {
+                    onPurchase("com.lovorise.package_1",50)
+                }
+            )
+
+            Spacer(Modifier.height(8.dp))
+
+            BuyLovoriseHeartsItems(
+                isDarkMode = isDarkMode,
+                item = BuyLovoriseHeartsItem("250","$ 4.99"),
+                onClick = {
+                    onPurchase("com.lovorise.package_2",250)
+                }
+            )
+
+            Spacer(Modifier.height(8.dp))
+
+            BuyLovoriseHeartsItems(
+                isDarkMode = isDarkMode,
+                item = BuyLovoriseHeartsItem("500","$ 9.99"),
+                onClick = {
+                    onPurchase("com.lovorise.package_3",500)
+                }
+            )
+
+            Spacer(Modifier.height(26.dp))
+
+            Text(
+                text = "By continuing, you agree to the Lovorise's",
+                fontSize = 12.sp,
+                lineHeight = 16.52.sp,
+                fontWeight = FontWeight.Normal,
+                letterSpacing = 0.4.sp,
+                color = Color(0xff344054),
+                textAlign = TextAlign.Center,
+                fontFamily = PoppinsFontFamily()
+            )
+
+            Spacer(Modifier.height(2.dp))
+
+            Text(
+                modifier = Modifier.height(16.52.dp).noRippleClickable(onTermsAndCondition),
+                text = "Terms & Conditions.",
+                fontSize = 12.sp,
+                lineHeight = 16.52.sp,
+                fontWeight = FontWeight.Medium,
+                letterSpacing = 0.4.sp,
+                color = PRIMARY,
+                textAlign = TextAlign.Center,
+                fontFamily = PoppinsFontFamily()
+            )
+
+            Spacer(Modifier.height(13.dp))
+
+
+
+
+
+
+        }
+
+
+        Spacer(
+            modifier = Modifier
+                .windowInsetsBottomHeight(WindowInsets.navigationBars)
+                .fillMaxWidth()
+                .background(if (isDarkMode) BASE_DARK else Color.White)
+        )
+
+
+    }
 
 }

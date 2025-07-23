@@ -76,7 +76,7 @@ fun EditProfileItem(
                     fontFamily = PoppinsFontFamily(),
                     fontWeight = FontWeight.Medium
                 )
-                if (showIndicator) Box(Modifier.size(10.dp).background(Color(0xffF33358), CircleShape))
+                if (showIndicator) Box(Modifier.size(6.dp).background(Color(0xffF33358), CircleShape))
             }
 
             Spacer(Modifier.height(8.dp))

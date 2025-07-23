@@ -156,7 +156,7 @@ fun PremiumSubscriptionDetailsDialog(
                     )
 
                     Text(
-                        text = if (type == SubscriptionType.WEEKLY) "£ 2.99 / ${stringResource(Res.string.weekly).lowercase()}" else "£ 5.99 / ${stringResource(Res.string.monthly).lowercase()}",
+                        text = if (type == SubscriptionType.WEEKLY) "$ 1.99 / ${stringResource(Res.string.weekly).lowercase()}" else "$ 3.99 / ${stringResource(Res.string.monthly).lowercase()}",
                         fontSize = 14.sp,
                         color = if (isDarkMode) DISABLED_LIGHT else Color(0xff344054),
                         lineHeight = 21.sp,
