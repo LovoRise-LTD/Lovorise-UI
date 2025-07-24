@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.room)
-    kotlin("plugin.serialization") version "2.0.0"
+    kotlin("plugin.serialization") version "2.2.0"
     id("com.google.gms.google-services")
 
 }
@@ -200,7 +200,7 @@ android {
     buildTypes {
         getByName("debug"){
             signingConfig = signingConfigs.getByName("release")
-//            isMinifyEnabled = true
+            isMinifyEnabled = false
 //            proguardFiles(
 //                getDefaultProguardFile("proguard-android-optimize.txt"),
 //                "proguard-rules.pro"

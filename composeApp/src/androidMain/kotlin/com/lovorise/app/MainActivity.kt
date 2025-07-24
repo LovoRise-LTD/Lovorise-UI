@@ -37,6 +37,10 @@ import com.lovorise.app.libs.audio.waveform.AmplitudeType
 import com.lovorise.app.libs.audio.waveform.AudioWaveform
 import com.lovorise.app.libs.audio.waveform.WaveformAlignment
 import com.lovorise.app.libs.iap.InAppPurchaseAndSubscription
+import com.lovorise.app.lovorise_hearts.domain.model.TransactionData
+import com.lovorise.app.lovorise_hearts.presentation.components.FilterTransactionBottomSheetContent
+import com.lovorise.app.lovorise_hearts.presentation.components.TransactionDetailsBottomSheetContent
+import com.lovorise.app.profile.presentation.edit_profile.hideWithCompletion
 import com.lovorise.app.ui.ThemeViewModel
 import com.lovorise.app.util.GpsProvider
 import com.lovorise.app.util.extractAndStoreReferralCodeFromUrl
@@ -156,25 +160,39 @@ fun ScreenPreview(){
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Green)
-            .padding(top = 200.dp),
+            .background(Color.White)
+            .padding(top = 450.dp),
 //            .safeContentPadding(),
        // contentAlignment = Alignment.Center
     ){
 
-        Row(Modifier.fillMaxWidth().height(28.2.dp)) {
-            AudioWaveform(
-                amplitudes = listOf(1,2,3,4,5,2,4,3,4,5,6,7,3,2,11,2,1,2,3,1),
-                waveformAlignment = WaveformAlignment.Center,
-                progress = 0.5f,
-                spikeWidth = 2.5.dp,
-                spikeRadius = 2.dp,
-                spikePadding = 2.dp,
-                amplitudeType = AmplitudeType.Max
-            ) {
-
+        FilterTransactionBottomSheetContent(
+            isDarkMode = false,
+            onApply = {
+//                sheetState.hideWithCompletion(coroutineScope){
+//                    purchaseScreenModel.updateTransactionFilterSheetState(false)
+//                }
             }
-        }
+        )
+
+//        TransactionDetailsBottomSheetContent(isDarkMode = false, onCancel = {}, transactionData = TransactionData(
+//            id = "", change = 100, name = "In app purchase", timestamp = "",
+//            type = TransactionData.Type.OUTGOING,
+//            formattedDate  ="June 1, 2023"))
+
+//        Row(Modifier.fillMaxWidth().height(28.2.dp)) {
+//            AudioWaveform(
+//                amplitudes = listOf(1,2,3,4,5,2,4,3,4,5,6,7,3,2,11,2,1,2,3,1),
+//                waveformAlignment = WaveformAlignment.Center,
+//                progress = 0.5f,
+//                spikeWidth = 2.5.dp,
+//                spikeRadius = 2.dp,
+//                spikePadding = 2.dp,
+//                amplitudeType = AmplitudeType.Max
+//            ) {
+//
+//            }
+//        }
 //        GiftAnimation()
 
 //       PurchaseSubscriptionScreenContent(

@@ -1,7 +1,13 @@
 package com.lovorise.app.lovorise_hearts.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
@@ -16,6 +22,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coinui.composeapp.generated.resources.Res
 import coinui.composeapp.generated.resources.months
+import com.lovorise.app.PoppinsFontFamily
+import com.lovorise.app.components.CustomDivider
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -53,22 +61,37 @@ fun DatePicker(
         }
     }
 
-    Row(modifier = modifier) {
-        SelectableList(
-            items = months,
-            state = monthState,
-            highlightCondition = { index -> index == monthState.firstVisibleItemIndex + 1 }
-        )
-        SelectableList(
-            items = (1..daysInSelectedMonth).map { it.toString() },
-            state = dayState,
-            highlightCondition = { index -> index == dayState.firstVisibleItemIndex + 1 }
-        )
-        SelectableList(
-            items = years.map { it.toString() },
-            state = yearState,
-            highlightCondition = { index -> index == yearState.firstVisibleItemIndex + 1 }
-        )
+    Box(Modifier.height(150.dp).fillMaxWidth()) {
+        Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+            CustomDivider()
+            CustomDivider()
+            CustomDivider()
+            CustomDivider()
+            CustomDivider()
+        }
+        Row(
+            modifier = modifier.fillMaxWidth().height(150.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            SelectableList(
+                modifier = Modifier.weight(1f),
+                items = months,
+                state = monthState,
+                highlightCondition = { index -> index == monthState.firstVisibleItemIndex + 1 }
+            )
+            SelectableList(
+                modifier = Modifier.weight(1f),
+                items = (1..daysInSelectedMonth).map { it.toString() },
+                state = dayState,
+                highlightCondition = { index -> index == dayState.firstVisibleItemIndex + 1 }
+            )
+            SelectableList(
+                modifier = Modifier.weight(1f),
+                items = years.map { it.toString() },
+                state = yearState,
+                highlightCondition = { index -> index == yearState.firstVisibleItemIndex + 1 }
+            )
+        }
     }
 }
 
@@ -87,23 +110,24 @@ fun isLeapYear(year: Int): Boolean {
 
 @Composable
 fun SelectableList(
+    modifier: Modifier,
     items: List<String>,
     state: LazyListState,
     highlightCondition: (Int) -> Boolean
 ) {
     LazyColumn(
+        modifier = modifier,
         state = state,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         items(items.size) { index ->
             Text(
+                fontFamily = PoppinsFontFamily(),
+                color = Color(0xff98A2B3),
                 text = items[index],
                 textAlign = TextAlign.Center,
                 modifier = Modifier
-                    .padding(vertical = 8.dp)
-                    .background(
-                        if (highlightCondition(index)) Color.Gray else Color.Transparent
-                    )
+                    .padding(vertical = 10.dp)
             )
         }
     }

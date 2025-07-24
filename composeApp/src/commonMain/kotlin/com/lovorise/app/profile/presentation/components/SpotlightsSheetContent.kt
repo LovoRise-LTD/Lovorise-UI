@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coinui.composeapp.generated.resources.Res
+import coinui.composeapp.generated.resources.boost_profile_visibility_for_hours
 import coinui.composeapp.generated.resources.boost_visibility_for
 import coinui.composeapp.generated.resources.cancel
 import coinui.composeapp.generated.resources.hours
@@ -44,8 +45,7 @@ import coinui.composeapp.generated.resources.ic_heart_small
 import coinui.composeapp.generated.resources.ic_spotlight
 import coinui.composeapp.generated.resources.ic_super_spotlight
 import coinui.composeapp.generated.resources.spotlight
-import coinui.composeapp.generated.resources.spotlights
-import coinui.composeapp.generated.resources.super_spotlights
+import coinui.composeapp.generated.resources.spotlight_profile
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.ui.BASE_DARK
@@ -79,10 +79,9 @@ fun SpotlightsSheetContent(
                 .fillMaxWidth()
                 .padding(
                     horizontal = if (screenWidth <= 340.dp)  5.dp else if (screenWidth in 340.dp..380.dp) 10.dp else 15.dp
-
                 )
                 .padding(top = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
@@ -93,9 +92,10 @@ fun SpotlightsSheetContent(
                 ,
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
-            ) {
+            ){
                 Text(
-                    text = if (superSpotlightSelected) stringResource(Res.string.super_spotlights) else stringResource(Res.string.spotlights),
+                    //text = if (superSpotlightSelected) stringResource(Res.string.super_spotlights) else stringResource(Res.string.spotlights),
+                    text = stringResource(Res.string.spotlight_profile),
                     fontFamily = PoppinsFontFamily(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
@@ -127,38 +127,48 @@ fun SpotlightsSheetContent(
                 }
             }
 
+            Spacer(Modifier.height(24.dp))
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
-            ){
-                SpotlightItem(
-                    text = stringResource(Res.string.super_spotlights),
-                    spotlightRes = Res.drawable.ic_super_spotlight,
-                    coins = superSpotlightCoins,
-                    modifier = Modifier.aspectRatio(166f/148f).weight(1f).noRippleClickable { superSpotlightSelected = true },
-                    visibilityHrs = 24,
-                    borderColor = if (superSpotlightSelected) Color(0XFFF33358) else Color(0xffEAECF0),
-                    borderWidth = if (superSpotlightSelected) 1.dp else 1.3.dp,
-                    isDarkMode = isDarkMode
-                )
-
-                Spacer(Modifier.width(
-                  if (screenWidth <= 340.dp)  3.dp else if (screenWidth in 340.dp..380.dp) 10.dp else 15.dp
-                ))
-
+            )
+            {
                 SpotlightItem(
                     text = stringResource(Res.string.spotlight),
                     spotlightRes = Res.drawable.ic_spotlight,
-                    coins = spotlightHearts,
-                    modifier =Modifier.aspectRatio(166f/148f).weight(1f).noRippleClickable { superSpotlightSelected = false },
-                    visibilityHrs = 1,
-                    borderColor =  if (!superSpotlightSelected) Color(0XFFF33358) else Color(0xffEAECF0),
-                    borderWidth = if (!superSpotlightSelected) 1.dp else 1.3.dp,
+                    coins = superSpotlightCoins,
+                    modifier = Modifier.fillMaxWidth().height(129.dp).noRippleClickable { superSpotlightSelected = true },
+                    visibilityHrs = 24,
+                    borderColor = Color(0XFFF33358),
+//                    borderColor = if (superSpotlightSelected) Color(0XFFF33358) else Color(0xffEAECF0),
+                    borderWidth = 1.dp,
+//                    borderWidth = if (superSpotlightSelected) 1.dp else 1.3.dp,
                     isDarkMode = isDarkMode
                 )
 
+//                Spacer(Modifier.width(
+//                  if (screenWidth <= 340.dp)  3.dp else if (screenWidth in 340.dp..380.dp) 10.dp else 15.dp
+//                ))
+//
+//                SpotlightItem(
+//                    text = stringResource(Res.string.spotlight),
+//                    spotlightRes = Res.drawable.ic_spotlight,
+//                    coins = spotlightHearts,
+//                    modifier =Modifier.aspectRatio(166f/148f).weight(1f).noRippleClickable { superSpotlightSelected = false },
+//                    visibilityHrs = 1,
+//                    borderColor =  if (!superSpotlightSelected) Color(0XFFF33358) else Color(0xffEAECF0),
+//                    borderWidth = if (!superSpotlightSelected) 1.dp else 1.3.dp,
+//                    isDarkMode = isDarkMode
+//                )
+
             }
+
+
+
+            Spacer(Modifier.height(24.dp))
+
 
             Box(
                 modifier = Modifier
@@ -221,18 +231,18 @@ fun SpotlightItem(modifier: Modifier,text:String,coins:Int,visibilityHrs:Int,spo
     ){
 
         Card(
-            modifier = Modifier.fillMaxWidth().weight(1f),
+            modifier = Modifier.fillMaxSize(),
             border = BorderStroke(
                 width = borderWidth,
                 color = borderColor
             ),
-            shape = RoundedCornerShape(13),
+            shape = RoundedCornerShape(20.dp),
             colors = CardDefaults.cardColors(containerColor = Color.Transparent)
 
         ) {
             Column(
-                modifier = Modifier,
-                verticalArrangement = Arrangement.spacedBy(10.dp),
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Spacer(modifier = Modifier.weight(1f))
@@ -256,7 +266,8 @@ fun SpotlightItem(modifier: Modifier,text:String,coins:Int,visibilityHrs:Int,spo
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically
-                ) {
+                )
+                {
 
                     Image(
                         imageVector = vectorResource(Res.drawable.ic_heart_small),
@@ -284,10 +295,10 @@ fun SpotlightItem(modifier: Modifier,text:String,coins:Int,visibilityHrs:Int,spo
             }
         }
 
-        Spacer(Modifier.height(2.dp))
+        Spacer(Modifier.height(8.dp))
 
         Text(
-            text = "${stringResource(Res.string.boost_visibility_for)} $visibilityHrs ${stringResource(Res.string.hours)}",
+            text = stringResource(Res.string.boost_profile_visibility_for_hours),
             fontFamily = PoppinsFontFamily(),
             fontWeight = FontWeight.Normal,
             textAlign = TextAlign.Center,

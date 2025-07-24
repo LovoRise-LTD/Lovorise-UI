@@ -35,7 +35,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -62,6 +65,7 @@ import com.lovorise.app.components.ConnectivityToast
 import com.lovorise.app.lovorise_hearts.domain.model.TransactionData
 import com.lovorise.app.lovorise_hearts.presentation.PurchaseScreenModel
 import com.lovorise.app.lovorise_hearts.presentation.components.FilterTransactionBottomSheetContent
+import com.lovorise.app.lovorise_hearts.presentation.components.TransactionDetailsBottomSheetContent
 import com.lovorise.app.lovorise_hearts.presentation.states.TransactionScreenState
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.profile.presentation.edit_profile.hideWithCompletion
@@ -116,11 +120,14 @@ fun TransactionHistoryScreenContent(onBack:()->Unit, isDarkMode:Boolean,transact
     val transactionTabs = stringArrayResource(Res.array.transaction_tabs)
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val transactionDetailsSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
 
     val pagerState = rememberPagerState { 3 }
 
     val coroutineScope = rememberCoroutineScope()
+
+    var selectedTransaction by remember { mutableStateOf<TransactionData?>(null) }
 
     Column(
         modifier = Modifier.fillMaxSize().background(if (isDarkMode) BASE_DARK else Color.White)
@@ -215,7 +222,9 @@ fun TransactionHistoryScreenContent(onBack:()->Unit, isDarkMode:Boolean,transact
                                 TransactionHeaderMonthYear(transactionsWithCategory.category, isDarkMode = isDarkMode)
                             }
                             items(transactionsWithCategory.transactions) { item ->
-                                TransactionItem(item, isDarkMode = isDarkMode, showDivider = item != transactionsWithCategory.transactions.last())
+                                TransactionItem(item, isDarkMode = isDarkMode, showDivider = item != transactionsWithCategory.transactions.last(), onClick = {
+                                    selectedTransaction = item
+                                })
                             }
                         }else{
                             item {
@@ -239,6 +248,30 @@ fun TransactionHistoryScreenContent(onBack:()->Unit, isDarkMode:Boolean,transact
         )
 
 
+    }
+
+    if (selectedTransaction != null) {
+        ModalBottomSheet(
+            contentWindowInsets = { WindowInsets(0.dp, 0.dp, 0.dp, 0.dp) },
+            //  modifier = Modifier.navigationBarsPadding(),
+            sheetState = transactionDetailsSheetState,
+            onDismissRequest = {
+                selectedTransaction = null
+            },
+            shape = RoundedCornerShape(topStartPercent = 4, topEndPercent = 4),
+            dragHandle = null,
+        ) {
+
+            TransactionDetailsBottomSheetContent(
+                isDarkMode = isDarkMode,
+                onCancel = {
+                    transactionDetailsSheetState.hideWithCompletion(coroutineScope){
+                        selectedTransaction = null
+                    }
+                },
+                transactionData = selectedTransaction!!
+            )
+        }
     }
 
     if (transactionScreenState.showTransactionFilterSheet) {
@@ -316,10 +349,10 @@ fun NoTransactionsYet(isDarkMode: Boolean) {
 }
 
 @Composable
-fun TransactionItem(item:TransactionData,isDarkMode: Boolean,showDivider:Boolean){
+fun TransactionItem(item:TransactionData,isDarkMode: Boolean,showDivider:Boolean,onClick:()-> Unit){
 
 
-    Row(Modifier.fillMaxWidth().padding(horizontal = 32.dp, vertical = 12.dp), verticalAlignment = Alignment.Top) {
+    Row(Modifier.fillMaxWidth().padding(horizontal = 32.dp, vertical = 12.dp).noRippleClickable(onClick), verticalAlignment = Alignment.Top) {
         Column(Modifier.fillMaxWidth().weight(1f)) {
             Text(
                 text = item.name,

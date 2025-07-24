@@ -34,9 +34,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coinui.composeapp.generated.resources.Res
-import coinui.composeapp.generated.resources.*
+import coinui.composeapp.generated.resources.apply
+import coinui.composeapp.generated.resources.choose_time
+import coinui.composeapp.generated.resources.end_date
+import coinui.composeapp.generated.resources.ic_chev_down
+import coinui.composeapp.generated.resources.start_date
+import coinui.composeapp.generated.resources.transaction_type
+import coinui.composeapp.generated.resources.transaction_types
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.components.ButtonWithText
+import com.lovorise.app.components.CustomDivider
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.ui.DISABLED_LIGHT
 import com.lovorise.app.ui.PRIMARY
@@ -44,6 +51,7 @@ import com.lovorise.app.ui.SECONDARY
 import org.jetbrains.compose.resources.stringArrayResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
 enum class SelectedDateType{
     START,END
@@ -55,8 +63,8 @@ enum class SelectedDateType{
 fun FilterTransactionBottomSheetContent(isDarkMode:Boolean,onApply:()->Unit) {
 
     var selectedDateType by rememberSaveable { mutableStateOf(SelectedDateType.START) }
-    var startDate by rememberSaveable { mutableStateOf("") }
-    var endDate by rememberSaveable { mutableStateOf("") }
+    var startDate by rememberSaveable { mutableStateOf<Triple<String, String, String>>(Triple("","","")) }
+    var endDate by rememberSaveable { mutableStateOf<Triple<String, String, String>>(Triple("","","")) }
     var showTransactionTypeContent by rememberSaveable { mutableStateOf(false) }
 
 
@@ -106,17 +114,37 @@ fun FilterTransactionBottomSheetContent(isDarkMode:Boolean,onApply:()->Unit) {
                 TransactionTypeContent(onApply = onApply)
             }else{
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                    SelectedDates(Modifier.weight(1f),isSelected = selectedDateType == SelectedDateType.START,onClick = {selectedDateType = SelectedDateType.START},date = startDate)
-                    SelectedDates(Modifier.weight(1f),isSelected = selectedDateType == SelectedDateType.END,onClick = {selectedDateType = SelectedDateType.END},date = endDate)
+                    SelectedDates(Modifier.weight(1f),isSelected = selectedDateType == SelectedDateType.START,onClick = {selectedDateType = SelectedDateType.START},date = "${startDate.first} ${startDate.second} ${startDate.third}", title = stringResource(Res.string.start_date))
+                    SelectedDates(Modifier.weight(1f),isSelected = selectedDateType == SelectedDateType.END,onClick = {selectedDateType = SelectedDateType.END},date = "${endDate.first} ${endDate.second} ${endDate.third}",stringResource(Res.string.end_date))
                 }
 
                 Spacer(Modifier.height(16.dp))
+                CustomDivider()
 
                 DatePicker(
                     modifier = Modifier.fillMaxWidth(),
-                    selectedYear = {},
-                    selectedMonth = {},
-                    selectedDay = {},
+                    selectedYear = {
+                        if (selectedDateType == SelectedDateType.START){
+                            startDate = Triple(startDate.first,startDate.second,it.toString())
+                        }else{
+                            endDate = Triple(endDate.first,endDate.second,it.toString())
+                        }
+
+                    },
+                    selectedMonth = {
+                        if (selectedDateType == SelectedDateType.START){
+                            startDate = Triple(startDate.first,it,startDate.third)
+                        }else{
+                            endDate = Triple(endDate.first,it,endDate.third)
+                        }
+                    },
+                    selectedDay = {
+                        if (selectedDateType == SelectedDateType.START){
+                            startDate = Triple(it.toString(),startDate.second,startDate.third)
+                        }else{
+                            endDate = Triple(it.toString(),endDate.second,endDate.third)
+                        }
+                    },
                 )
             }
 
@@ -183,11 +211,11 @@ fun SelectTransactionType(item:String,onClick:()->Unit,isSelected:Boolean) {
 }
 
 @Composable
-fun SelectedDates(modifier: Modifier,isSelected:Boolean,onClick:()->Unit,date:String) {
-    Box(modifier.height(57.dp).border(1.dp,if (isSelected) PRIMARY else DISABLED_LIGHT).noRippleClickable(onClick), contentAlignment = Alignment.CenterStart) {
+fun SelectedDates(modifier: Modifier,isSelected:Boolean,onClick:()->Unit,date:String,title: String) {
+    Box(modifier.height(57.dp).border(1.dp,if (isSelected) PRIMARY else DISABLED_LIGHT, shape = RoundedCornerShape(8.dp)).noRippleClickable(onClick), contentAlignment = Alignment.CenterStart) {
         Column(Modifier.padding(horizontal = 16.dp).fillMaxSize(), verticalArrangement = Arrangement.Center) {
             Text(
-                text = stringResource(Res.string.start_date),
+                text = title,
                 fontFamily = PoppinsFontFamily(),
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
@@ -232,6 +260,30 @@ fun TransactionType(onClick:()->Unit) {
             contentDescription = null,
             modifier = Modifier.size(12.dp),
             tint = PRIMARY
+        )
+
+    }
+}
+
+@Preview
+@Composable
+fun MyPreview() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .padding(top = 450.dp),
+//            .safeContentPadding(),
+        // contentAlignment = Alignment.Center
+    ) {
+
+        FilterTransactionBottomSheetContent(
+            isDarkMode = false,
+            onApply = {
+//                sheetState.hideWithCompletion(coroutineScope){
+//                    purchaseScreenModel.updateTransactionFilterSheetState(false)
+//                }
+            }
         )
 
     }

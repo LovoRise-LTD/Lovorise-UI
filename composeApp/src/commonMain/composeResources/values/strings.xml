@@ -386,8 +386,10 @@
     <string name="subscription_terms">Subscription Terms</string>
     <string name="super_spotlights">Super spotlights</string>
     <string name="spotlights">Spotlights</string>
+    <string name="spotlight_profile">Spotlight profile</string>
     <string name="spotlight">Spotlight</string>
     <string name="hours">hours</string>
+    <string name="boost_profile_visibility_for_hours">Boost profile visibility for 24 hours.</string>
     <string name="aware_age_update">I am aware that my age can only be changed once. After that, I'll need to authenticate ID to modify my age.</string>
     <string name="aware_name_update">I am aware that my name can only be changed once. After that, I'll need to authenticate ID to modify my name. </string>
     <string name="age">Age</string>
@@ -635,6 +637,7 @@
 <!--    <string name="resume_your_account_to_meet_new_people">Resume your account to meet new people. People who you have already liked may still  see your profile &amp; match with you.</string>-->
     <string name="your_personalized_feed_on_way">Your personalized feed is on the way!</string>
     <string name="create_reel_message">Check back soon for exciting reels tailored just for you!</string>
+    <string name="your_profile_is_getting_extra_visibility_for_the_next_hours">Your profile is getting extra visibility for the next hours! Swipe now to connect with more people in your area.</string>
     <string name="you_are_in_spotlight_message">For the next 1 hour, your profile will be shown to more people in your area! Start swiping to maximize your matches.</string>
     <string name="you_are_in_super_spotlight_message">For the next 24 hour, your profile will be shown to more people in your area! Start swiping to maximize your matches.</string>
     <string name="you_are_in_spotlight">You’re in the Spotlight</string>
@@ -643,6 +646,7 @@
     <string name="no_favorites_yet">No favorites yet!</string>
     <string name="explore">Explore</string>
     <string name="hearts">Hearts</string>
+    <string name="date_and_time">Date and time</string>
     <string name="hearts_let_you_unlock_special_perks_and_premium">Hearts let you unlock special perks and premium features to boost your Lovorise experience. </string>
     <string name="buy_hearts">Buy Hearts</string>
     <string name="your_block_list_empty">Your blocked list is empty</string>
@@ -940,6 +944,7 @@
     <string name="transaction_type">Transaction type</string>
     <string name="choose_time">Choose time</string>
     <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
     <string name="one_time_payment">One-time payment</string>
     <string name="you_last_signed_with_google">You last signed in with Google</string>
     <string name="you_last_signed_with_apple">You last signed in with Apple</string>

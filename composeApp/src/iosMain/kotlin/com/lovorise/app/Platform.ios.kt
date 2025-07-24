@@ -1,60 +1,42 @@
 package com.lovorise.app
 
+//import androidx.compose.foundation.gestures.optOutOfCupertinoOverscroll
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.gestures.optOutOfCupertinoOverscroll
 import androidx.compose.runtime.ProvidedValue
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import androidx.room.Room
-import androidx.sqlite.driver.NativeSQLiteDriver
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import coil3.PlatformContext
+import com.lovorise.app.database.AppDatabase
+import com.lovorise.app.database.dbFileName
 import io.ktor.http.ContentType
 import io.ktor.http.content.ChannelWriterContent
 import io.ktor.http.content.OutgoingContent
 import io.ktor.http.defaultForFilePath
 import io.ktor.utils.io.writeFully
-import kotlinx.cinterop.ExperimentalForeignApi
-import kotlinx.cinterop.convert
-import kotlinx.coroutines.suspendCancellableCoroutine
-import platform.Foundation.NSData
-import platform.Foundation.NSNumber
 import kotlinx.cinterop.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
+import kotlinx.coroutines.suspendCancellableCoroutine
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import platform.Foundation.NSBundle
+import platform.Foundation.NSData
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
+import platform.Foundation.NSNumber
 import platform.Foundation.NSNumberFormatter
-import platform.UIKit.UIApplication
-import platform.UIKit.UIContentSizeCategoryExtraExtraExtraLarge
-import platform.UIKit.UIContentSizeCategoryExtraExtraLarge
-import platform.UIKit.UIContentSizeCategoryExtraLarge
-import platform.UIKit.UIContentSizeCategoryExtraSmall
-import platform.UIKit.UIContentSizeCategoryLarge
-import platform.UIKit.UIContentSizeCategoryMedium
-import platform.UIKit.UIContentSizeCategorySmall
-import platform.UIKit.UIDevice
-import platform.UIKit.UIScreen
-import platform.darwin.DISPATCH_QUEUE_PRIORITY_DEFAULT
-import platform.darwin.dispatch_get_global_queue
-import platform.darwin.dispatch_read
-import platform.posix.O_RDWR
-import platform.posix.close
-import platform.posix.exit
-import platform.posix.open
-import platform.posix.stat
-import platform.UIKit.*
 import platform.Foundation.NSString
 import platform.Foundation.NSURL
 import platform.Foundation.NSUserDomainMask
 import platform.Foundation.stringWithCString
+import platform.UIKit.*
+import platform.darwin.DISPATCH_QUEUE_PRIORITY_DEFAULT
+import platform.darwin.dispatch_get_global_queue
+import platform.darwin.dispatch_read
 import platform.posix.*
-import com.lovorise.app.database.AppDatabase
-import com.lovorise.app.database.dbFileName
 
 
 class IOSPlatform: Platform {
@@ -138,12 +120,13 @@ actual fun getAppVersion(context: PlatformContext): String {
 
 private fun getDeviceIdentifier(): String {
     val name = "hw.machine"
-    var size = 0u
-    sysctlbyname(name, null, size.toULong().ptr, null, 0)
-    sysctlbyname(name, null, size.toULong().ptr, null, 0)
-    val bytes = ByteArray(size.toInt())
-    sysctlbyname(name, bytes.refTo(0), size.toULong().ptr, null, 0)
-    return NSString.stringWithCString(bytes.toCValues().ptr, encoding = 4u /* UTF-8 */) ?: "unknown"
+//    var size = 0u
+//    sysctlbyname(name, null, size.toULong().ptr, null, 0)
+//    sysctlbyname(name, null, size.toULong().ptr, null, 0)
+//    val bytes = ByteArray(size.toInt())
+//    sysctlbyname(name, bytes.refTo(0), size.toULong().ptr, null, 0)
+//    return NSString.stringWithCString(bytes.toCValues().ptr, encoding = 4u /* UTF-8 */) ?: "unknown"
+    return ""
 }
 
 actual fun getDatabaseModule() : Module = module {
@@ -161,14 +144,15 @@ fun createRoomDatabase(): AppDatabase {
 
 @OptIn(ExperimentalForeignApi::class)
 private fun fileDirectory(): String {
-    val documentDirectory: NSURL? = NSFileManager.defaultManager.URLForDirectory(
-        directory = NSDocumentDirectory,
-        inDomain = NSUserDomainMask,
-        appropriateForURL = null,
-        create = false,
-        error = null,
-    )
-    return requireNotNull(documentDirectory).path!!
+//    val documentDirectory: NSURL? = NSFileManager.defaultManager.URLForDirectory(
+//        directory = NSDocumentDirectory,
+//        inDomain = NSUserDomainMask,
+//        appropriateForURL = null,
+//        create = false,
+//        error = null,
+//    )
+//    return requireNotNull(documentDirectory).path!!
+    return ""
 }
 
 //private fun getDeviceIdentifier(): String {
@@ -185,13 +169,16 @@ private fun fileDirectory(): String {
 //}
 
 actual fun getDeviceName(): String {
-    val identifier = getDeviceIdentifier()
-    return iosDeviceMap[identifier] ?: identifier // fallback to raw identifier if not found
+    return  ""
+//    val identifier = getDeviceIdentifier()
+//    return iosDeviceMap[identifier] ?: identifier // fallback to raw identifier if not found
 }
 
 
 @OptIn(ExperimentalFoundationApi::class)
-actual fun disableUiKitOverscroll() = optOutOfCupertinoOverscroll()
+actual fun disableUiKitOverscroll() {
+
+}
 actual fun provideNullAndroidOverscrollConfiguration() = emptyArray<ProvidedValue<*>>()
 
 actual fun closeApp(context: PlatformContext){

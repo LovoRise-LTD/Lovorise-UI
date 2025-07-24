@@ -32,6 +32,7 @@ import coinui.composeapp.generated.resources.you_are_in_spotlight
 import coinui.composeapp.generated.resources.you_are_in_spotlight_message
 import coinui.composeapp.generated.resources.you_are_in_super_spotlight
 import coinui.composeapp.generated.resources.you_are_in_super_spotlight_message
+import coinui.composeapp.generated.resources.your_profile_is_getting_extra_visibility_for_the_next_hours
 import com.lovorise.app.PoppinsFontFamily
 import com.lovorise.app.noRippleClickable
 import com.lovorise.app.ui.BASE_DARK
@@ -71,7 +72,7 @@ fun PurchasedSpotlightBottomSheetContent(isDarkMode:Boolean,onCancel:()->Unit,sp
 
             Text(
                 modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally),
-                text = stringResource(if (spotlightType == SpotlightType.SPOTLIGHT) Res.string.you_are_in_spotlight else Res.string.you_are_in_super_spotlight),
+                text = stringResource(Res.string.you_are_in_spotlight),
                 fontFamily = PoppinsFontFamily(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
@@ -101,7 +102,7 @@ fun PurchasedSpotlightBottomSheetContent(isDarkMode:Boolean,onCancel:()->Unit,sp
 
             Text(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 18.dp).align(Alignment.CenterHorizontally),
-                text = stringResource(if (spotlightType == SpotlightType.SPOTLIGHT) Res.string.you_are_in_spotlight_message else Res.string.you_are_in_super_spotlight_message),
+                text = stringResource( Res.string.your_profile_is_getting_extra_visibility_for_the_next_hours),
                 fontFamily = PoppinsFontFamily(),
                 fontWeight = FontWeight.Normal,
                 fontSize = 12.sp,
