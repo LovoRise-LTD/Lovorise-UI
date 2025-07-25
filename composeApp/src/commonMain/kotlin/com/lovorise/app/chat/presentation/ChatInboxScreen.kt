@@ -118,7 +118,9 @@ import com.lovorise.app.chat.domain.model.Conversation
 import com.lovorise.app.chat.domain.model.Message
 import com.lovorise.app.chat.presentation.components.ChatInboxHeader
 import com.lovorise.app.chat.presentation.components.ChatInboxMoreOptionsBottomSheetContent
+import com.lovorise.app.chat.presentation.components.ClearChatDialog
 import com.lovorise.app.chat.presentation.components.ConvertGiftsBottomSheetContent
+import com.lovorise.app.chat.presentation.components.DeleteChatDialog
 import com.lovorise.app.chat.presentation.components.DeleteMessageConfirmationDialog
 import com.lovorise.app.chat.presentation.components.MediaPickerBottomSheetContent
 import com.lovorise.app.chat.presentation.components.MessageBox
@@ -403,7 +405,8 @@ fun ChatInboxScreenContent(conversation: Conversation, isDarkMode:Boolean, onBac
                     }
                     chatScreenModel.updateEmojiPickerState(false)
                 }
-        ){
+        )
+        {
 
 
             Spacer(
@@ -838,6 +841,30 @@ fun ChatInboxScreenContent(conversation: Conversation, isDarkMode:Boolean, onBac
         }
     }
 
+    if (state.showClearChatConfirmationDialog){
+        ClearChatDialog(
+            onCancel = {
+                chatScreenModel.updateBlockConfirmationDialogState(false)
+            },
+            onClear = {
+                chatScreenModel.updateBlockConfirmationDialogState(false)
+            },
+            isDarkMode = isDarkMode
+        )
+    }
+
+    if (state.showDeleteChatConfirmationDialog){
+        DeleteChatDialog(
+            onCancel = {
+                chatScreenModel.updateBlockConfirmationDialogState(false)
+            },
+            onDelete = {
+                chatScreenModel.updateDeleteChatConfirmationDialogState(false)
+            },
+            isDarkMode = isDarkMode
+        )
+    }
+
 
     if (state.showMoreChatInboxOptionBottomSheet){
         ModalBottomSheet(
@@ -871,6 +898,22 @@ fun ChatInboxScreenContent(conversation: Conversation, isDarkMode:Boolean, onBac
                     }.invokeOnCompletion {
                         chatScreenModel.toggleMoreOptionsBottomSheet()
                         chatScreenModel.updateBlockConfirmationDialogState(true)
+                    }
+                },
+                onDeleteChat = {
+                    coroutineScope.launch {
+                        moreOptionsBottomSheetState.hide()
+                    }.invokeOnCompletion {
+                        chatScreenModel.toggleMoreOptionsBottomSheet()
+                        chatScreenModel.updateDeleteChatConfirmationDialogState(true)
+                    }
+                },
+                onClearChat = {
+                    coroutineScope.launch {
+                        moreOptionsBottomSheetState.hide()
+                    }.invokeOnCompletion {
+                        chatScreenModel.toggleMoreOptionsBottomSheet()
+                        chatScreenModel.updateClearConfirmationDialogState(true)
                     }
                 }
             )

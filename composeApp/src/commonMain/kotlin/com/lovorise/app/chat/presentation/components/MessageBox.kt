@@ -37,11 +37,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.graphicsLayer
@@ -158,7 +160,10 @@ fun MessageBox(
                 onLongClick = onLongPress
             )
             .then(
-                if (isSelected) Modifier.background(if (isDarkMode) Color(0xffBEC1C6) else Color(0xffF9E9EC))
+                if (isSelected) Modifier.background(brush = Brush.linearGradient(colors = listOf(
+                    Color(0xffF3335D).copy(alpha = 0.5f),
+                    Color(0xffF33386).copy(alpha = 0.5f),
+                )))
                 else Modifier
             ),
             contentAlignment = if (isSent) Alignment.TopEnd else Alignment.TopStart
@@ -446,8 +451,9 @@ fun MessageBox(
                 Box(Modifier.padding(horizontal = 16.dp)) {
                     if (isSelected) {
                         Row(
-                            modifier = Modifier.padding(vertical = 4.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            modifier = Modifier.padding(vertical = 0.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
                             SelectionIndicator()
                             Spacer(modifier = Modifier.then(if (isSent) Modifier.weight(1f) else Modifier))
@@ -542,8 +548,7 @@ fun SelectionIndicator() {
         Modifier
             .size(20.dp)
             .background(Color(0xffF33358), shape = CircleShape)
-            .border(1.5.dp, color = Color.White, shape = CircleShape)
-        ,
+            .border(1.5.dp, color = Color.White, shape = CircleShape),
         contentAlignment = Alignment.Center
     ) {
         Image(

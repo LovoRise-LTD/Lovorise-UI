@@ -14,6 +14,7 @@ import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
 import coil3.request.crossfade
 import coil3.util.DebugLogger
+import com.lovorise.app.chat.presentation.ChatInboxScreen
 import com.lovorise.app.home.HomeScreen
 import com.lovorise.app.libs.iap.InAppPurchasesAndSubscriptions
 import com.lovorise.app.util.CacheUtil
@@ -48,7 +49,7 @@ fun App(
 
     KoinContext {
         Box {
-            Navigator(HomeScreen()) { navigator ->
+            Navigator(ChatInboxScreen("123")) { navigator ->
 //                val from = navigator.items.getOrNull(navigator.items.lastIndex - 1)
 //                val to = navigator.lastItem
 

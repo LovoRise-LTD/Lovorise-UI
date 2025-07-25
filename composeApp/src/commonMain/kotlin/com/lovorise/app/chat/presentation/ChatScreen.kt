@@ -190,34 +190,34 @@ fun ChatScreenContent(isDarkMode:Boolean,chatScreenModel: ChatScreenModel,naviga
                     )
                 }
 
-                Spacer(Modifier.height(11.dp))
+                Spacer(Modifier.height(23.dp))
 
-                MatchesAndLikesSection(
-                    blurLike = true,
-                    likes = state.users.take(10),
-                    onLikesClick = {},
-                    onSeeAllClick = {},
-                    onLikeItemClick = { user->
-                        chatScreenModel.startNewConversationIfRequired(user, context){id->
-                            navigateToChatInboxScreen(id)
-                        }
-                    },
-                    isDarkMode = isDarkMode,
-                    matchesCount = 0
-                )
+//                MatchesAndLikesSection(
+//                    blurLike = true,
+//                    likes = state.users.take(10),
+//                    onLikesClick = {},
+//                    onSeeAllClick = {},
+//                    onLikeItemClick = { user->
+//                        chatScreenModel.startNewConversationIfRequired(user, context){id->
+//                            navigateToChatInboxScreen(id)
+//                        }
+//                    },
+//                    isDarkMode = isDarkMode,
+//                    matchesCount = 0
+//                )
 
-                Spacer(Modifier.height(6.dp))
+//                Spacer(Modifier.height(6.dp))
 
-                Box(
-                    Modifier.fillMaxWidth().height(41.dp).padding(horizontal = 16.dp),
-                    contentAlignment = Alignment.CenterStart
-                ) {
-                    TextWithUnreadCount(
-                        stringResource(Res.string.messages),
-                        state.conversations.sumOf {c-> c.unreadCount },
-                        isDarkMode = isDarkMode
-                    )
-                }
+//                Box(
+//                    Modifier.fillMaxWidth().height(41.dp).padding(horizontal = 16.dp),
+//                    contentAlignment = Alignment.CenterStart
+//                ) {
+//                    TextWithUnreadCount(
+//                        stringResource(Res.string.messages),
+//                        state.conversations.sumOf {c-> c.unreadCount },
+//                        isDarkMode = isDarkMode
+//                    )
+//                }
 
 
 //        Box(Modifier.fillMaxWidth().padding(horizontal = 16.dp)) {

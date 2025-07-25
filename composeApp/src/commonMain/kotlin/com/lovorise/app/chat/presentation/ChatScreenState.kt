@@ -21,6 +21,8 @@ data class ChatScreenState(
     val showDeleteConversationConfirmationDialog:Boolean = false,
     val showUnmatchConfirmationDialog:Boolean = false,
     val showBlockConfirmationDialog:Boolean = false,
+    val showClearChatConfirmationDialog:Boolean = false,
+    val showDeleteChatConfirmationDialog:Boolean = false,
     val showUnblockConfirmationDialog:Boolean = false,
     val isRinging:Boolean = true,
     val isCalling:Boolean = false,

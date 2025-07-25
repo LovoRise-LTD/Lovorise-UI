@@ -321,6 +321,23 @@ class ChatScreenModel(private val chatRepo:ChatRepo) : ScreenModel {
         }
     }
 
+    fun updateClearConfirmationDialogState(value: Boolean){
+        _state.update {
+            it.copy(
+                showClearChatConfirmationDialog = value
+            )
+        }
+    }
+
+
+    fun updateDeleteChatConfirmationDialogState(value: Boolean){
+        _state.update {
+            it.copy(
+                showDeleteChatConfirmationDialog = value
+            )
+        }
+    }
+
     fun updateUnblockConfirmationDialogState(value: Boolean){
         _state.update {
             it.copy(

@@ -30,6 +30,8 @@ import org.jetbrains.compose.resources.stringResource
 fun ChatInboxMoreOptionsBottomSheetContent(
     isDarkMode:Boolean,
     onUnmatch:()->Unit,
+    onDeleteChat:()->Unit,
+    onClearChat:()->Unit,
     onBlock:()->Unit,
     onReport:()->Unit
 ) {
@@ -63,6 +65,21 @@ fun ChatInboxMoreOptionsBottomSheetContent(
         OptionItem(
             onClick = onBlock,
             title = stringResource(Res.string.block),
+            isDarkMode = isDarkMode
+        )
+
+
+        Spacer(Modifier.height(8.dp))
+        OptionItem(
+            onClick = onClearChat,
+            title = stringResource(Res.string.clear_chat),
+            isDarkMode = isDarkMode
+        )
+
+        Spacer(Modifier.height(8.dp))
+        OptionItem(
+            onClick = onDeleteChat,
+            title = stringResource(Res.string.delete_chat),
             isDarkMode = isDarkMode
         )
 
